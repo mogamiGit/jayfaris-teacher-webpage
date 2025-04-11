@@ -16,6 +16,7 @@ import TitleSection from "../components/TitleSection.tsx";
 import Check from "../components/Check.tsx";
 import SectionDescription from "../components/SectionDescription";
 import ContactForm from "../components/ContactForm";
+const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
 ---
 
 <Layout
@@ -23,9 +24,10 @@ import ContactForm from "../components/ContactForm";
   description="Learn US English with Jay Faris. Personalized lessons and resources for all levels."
 >
   <Header>
-    <a class="hover:font-bold duration-200" href="#projects">Projects</a>
+
+    <a class="hover:font-bold duration-200" href={bookLeasonUrl} target="_blank">Book a lesson</a>
     <a class="hover:font-bold duration-200" href="#experience">Experience</a>
-    <a class="hover:font-bold duration-200" href="#about">About me</a>
+    <a class="hover:font-bold duration-200" href="#contact">Contact me</a>
   </Header>
   <main>
     <div
@@ -49,14 +51,14 @@ import ContactForm from "../components/ContactForm";
       </a>
     </div>
     <section
-      class="w-full mx-auto flex flex-col-reverse md:flex-row justify-between gap-x-10 items-top"
+      class="w-full mx-auto flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top"
     >
       <div
         class="flex justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
       >
         <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
           <div id="tag" class="pb-3">
-            <a class="hover:font-bold duration-200 cursor-pointer" href="https://calendly.com/nexolabs/consultoria-uno-a-uno" target="_blank">
+            <a class="hover:font-bold duration-200 cursor-pointer" href={bookLeasonUrl} target="_blank">
               <Tag
                 client:load
                 text="Book a lesson"
@@ -70,12 +72,10 @@ import ContactForm from "../components/ContactForm";
           <H1 client:load text="Hi, my name is Jay Faris" />
         </div>
         <p>
-          I'm a passionate English teacher with a strong background in web development and design. With a commitment to creating engaging and effective learning experiences, I combine my technical skills with pedagogical expertise to help students succeed in their academic and professional pursuits.
+          I'm a passionate English teacher that loves his work, I enjoy to have great conversations with my students were they can express themself. I'm here to help you improve your English skills and make your learning journey enjoyable and effective.
         </p>
       </div>
-      <div class="w-full h-auto pl-5 mx-0">
-        <img class="w-full" src="images/image-hero.png" alt="" />
-      </div>
+        <img class="w-auto max-h-[500px] sm:pb-4" src="images/image-hero.png" alt="" />
     </section>
     <section
       id="sintetic"
@@ -461,14 +461,14 @@ import ContactForm from "../components/ContactForm";
           </div>
           <div class="flex flex-col gap-8">
             <SectionDescription
-              title="contact"
+              title="mail"
               description="mogami.creative@gmail.com"
             />
             <div class="w-full flex flex-col gap-2">
               <SectionDescription
-                title="linkedin"
-                description="monicagalandelallana"
-                link="https://www.linkedin.com/in/monicagalandelallana"
+                title="youtube"
+                description="@f-techenglish295"
+                link="https://www.youtube.com/@f-techenglish295"
               />
             </div>
           </div>
