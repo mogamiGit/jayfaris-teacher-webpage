@@ -15,7 +15,7 @@ const { class: innerDivClass, id, backgroundClassname, ...rest } = Astro.props;
 {/* Outer element is now a section */}
 <section
   id={id}
-  class:list={["w-full justify-self-center", backgroundClassname]} 
+  class:list={["w-full justify-self-center pb-20", backgroundClassname]} 
   {...rest} 
 >
   {/* Inner div still handles the content constraints and specific layout classes */}
