@@ -2,15 +2,16 @@
 import TitleSection from "../components/TitleSection.tsx";
 import TitleSymbol from "../components/TitleSymbol.astro";
 import ListItem from "../components/ListItem.tsx";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section
+<SectionWrapper
 id="experience"
-class="w-full mx-auto pt-20"
 data-scroll="seccion2"
+backgroundClassname="py-10"
 >
 <TitleSection client:load text="experience" />
-<div class="px-5 pt-8">
+<div class="">
   <div class="grid grid-cols-1 gap-14 md:grid-cols-2">
     <div>
       <TitleSymbol>Education</TitleSymbol>
@@ -68,4 +69,4 @@ data-scroll="seccion2"
     </div>
   </div>
 </div>
-</section>
+</SectionWrapper>

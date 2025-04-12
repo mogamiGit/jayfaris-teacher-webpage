@@ -1,0 +1,25 @@
+---
+// src/components/SectionWrapper.astro (acting as SectionWrapper)
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'section'> { 
+    backgroundClassname?: string; 
+    // 'class' prop from Astro.props applies to the inner content div
+    id?: string; 
+}
+
+// Destructure: 'class' is for the inner div, 'id' and 'backgroundClassname' for the outer section
+const { class: innerDivClass, id, backgroundClassname, ...rest } = Astro.props;
+---
+
+{/* Outer element is now a section */}
+<section
+  id={id}
+  class:list={["w-full justify-self-center", backgroundClassname]} 
+  {...rest} 
+>
+  {/* Inner div still handles the content constraints and specific layout classes */}
+  <div class:list={["mx-auto max-w-screen-xl px-4 w-full", innerDivClass]}>
+    <slot /> {/* Section content goes here */}
+  </div>
+</section>

@@ -2,12 +2,14 @@
 import Bullets from "../components/Bullets.astro";
 import Tag from "../components/Tag";
 import TitleSymbol from "../components/TitleSymbol.astro";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section
+<SectionWrapper
   id="skills"
-  class="w-full mx-auto flex flex-col gap-10"
+  class="flex flex-col gap-10"
   data-scroll="seccion6"
+  backgroundClassname="py-10"
 >
   <div class="flex flex-col gap-6">
     <TitleSymbol>Hard skills</TitleSymbol>
@@ -52,4 +54,4 @@ import TitleSymbol from "../components/TitleSymbol.astro";
       <Tag client:load text="Teamwork" variant="gray" />
     </div>
   </div>
-</section>
+</SectionWrapper>

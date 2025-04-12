@@ -1,11 +1,13 @@
 ---
 import TitleSection from "../components/TitleSection.tsx";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section
+<SectionWrapper
   id="about-me"
-  class="w-full mx-auto flex flex-col lg:flex-row-reverse gap-10 items-center"
+  class="flex flex-col lg:flex-row-reverse gap-10 items-center"
   data-scroll="seccion5"
+  backgroundClassname="py-10"
 >
     <img
       src="images/profile_photo.png"
@@ -22,4 +24,4 @@ import TitleSection from "../components/TitleSection.tsx";
         <br /><br />I have also taught English as a Second Language (ESL) in my family school and also in various schools in Tokyo.
       </p>
     </div>
-</section>
+</SectionWrapper>

@@ -2,12 +2,14 @@
 import ContactForm from "../components/ContactForm";
 import SectionDescription from "../components/SectionDescription";
 import TitleSection from "../components/TitleSection";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section
+<SectionWrapper
   id="contact"
-  class="w-full mx-auto flex flex-col gap-10"
+  class="flex flex-col gap-10"
   data-scroll="seccion4"
+  backgroundClassname="py-10"
 >
   <TitleSection client:load text="contact with me" />
   <div class="grid md:grid-cols-3 gap-10 grid-cols-1">
@@ -28,4 +30,4 @@ import TitleSection from "../components/TitleSection";
       </div>
     </div>
   </div>
-</section>
+</SectionWrapper>

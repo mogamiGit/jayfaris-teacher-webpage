@@ -1,10 +1,12 @@
 ---
 import HighlightedTitle from "../components/HighlightedTitle";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section
+<SectionWrapper
     id="sintetic"
-    class="w-full mx-auto flex md:flex-row sm:flex-col justify-center gap-10 px-8 flex-wrap"
+    class="flex md:flex-row sm:flex-col justify-center gap-10 flex-wrap"
+    backgroundClassname="py-10"
 >
     <HighlightedTitle client:load title="Experience" subtitle="3º Generation of Teachers" />
     <div class="border-r hidden md:block border-gray-300 w-3"></div>
@@ -19,4 +21,4 @@ import HighlightedTitle from "../components/HighlightedTitle";
         title="Leasons"
         subtitle="2860"
     />
-</section>
+</SectionWrapper>

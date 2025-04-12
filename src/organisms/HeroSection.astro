@@ -1,14 +1,15 @@
 ---
 import H4 from "../components/H4.tsx";
 import H1 from "../components/H1.tsx";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section
+<SectionWrapper
   id="hero"
-  class="w-full mx-auto flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top pt-20 md:pt-0"
+  class="flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top"
 >
   <div
-    class="flex justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
+    class="flex w-full justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
   >
     <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
       <H4 client:load text="Texas · English Teacher" />
@@ -23,4 +24,4 @@ import H1 from "../components/H1.tsx";
   <div class="flex flex-col items-center gap-8 justify-center px-6 md:px-0">
     <img class="w-auto max-h-[500px] sm:pb-4 pt-10 md:pt-0" src="images/image-hero.png" alt="Jay Faris smiling" />
   </div>
-</section>
+</SectionWrapper>

@@ -1,11 +1,16 @@
 ---
 import TitleSection from "../components/TitleSection";
 import AccordionItem from "../components/AccordionItem.jsx";
+import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<section id="projects" class="w-full mx-auto pt-20" data-scroll="seccion1">
+<SectionWrapper
+  id="projects"
+  data-scroll="seccion1"
+  backgroundClassname="py-10"
+>
   <TitleSection client:load text="my vital experience" />
-  <div class="w-full mx-auto">
+  <div>
     <AccordionItem
       client:load
       name="Discovering Japan"
@@ -41,4 +46,4 @@ import AccordionItem from "../components/AccordionItem.jsx";
       checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
     />
   </div>
-</section>
+</SectionWrapper>

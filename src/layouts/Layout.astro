@@ -81,6 +81,11 @@ const { description } = Astro.props;
       max-width: 1240px;
       padding-bottom: 60px;
     }
+
+    /* Utility class to break out of the content wrapper */
+    .ignore-wrapper {
+      @apply relative left-1/2 -translate-x-1/2 w-screen max-w-none;
+    }
   </style>
 
   <script
