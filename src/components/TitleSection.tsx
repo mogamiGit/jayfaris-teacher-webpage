@@ -7,7 +7,7 @@ interface Props {
 
 const TitleSection: React.FC<Props> = ({ text }) => {
       return(
-            <div className="flex gap-1 text-blue-violet text-5xl font-thin pb-5">
+            <div className="flex gap-1 text-blue-violet text-5xl font-thin pb-5 text-nowrap">
                   <motion.p
                         className='w-3'
                         animate={{ y: [0, -10, 0], fontWeight: [300, 500, 300] }}

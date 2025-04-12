@@ -1,0 +1,51 @@
+---
+import Bullets from "../components/Bullets.astro";
+import Tag from "../components/Tag";
+import TitleSymbol from "../components/TitleSymbol.astro";
+---
+
+<div class="mt-10">
+    <TitleSymbol>Hard skills</TitleSymbol>
+    <div class="flex gap-x-10 gap-y-8 flex-wrap mt-6">
+      <Bullets title="Languages">
+        <Tag client:load text="HTML" variant="gray" />
+        <Tag client:load text="CSS" variant="gray" />
+        <Tag client:load text="JS" variant="gray" />
+        <Tag client:load text="Swift" variant="gray" />
+      </Bullets>
+      <Bullets title="Frameworks and SDKs">
+        <Tag client:load text="React" variant="gray" />
+        <Tag client:load text="Astro" variant="gray" />
+        <Tag client:load text="Svelte" variant="gray" />
+        <Tag client:load text="SwiftUI" variant="gray" />
+        <Tag client:load text="SwiftData" variant="gray" />
+      </Bullets>
+      <Bullets title="Patterns">
+        <Tag client:load text="MVVM" variant="gray" />
+        <Tag client:load text="MVC" variant="gray" />
+      </Bullets>
+      <Bullets title="Tools & Technologies">
+        <Tag client:load text="Figma" variant="gray" />
+        <Tag client:load text="RESTful APIs" variant="gray" />
+        <Tag client:load text="Postman" variant="gray" />
+        <Tag client:load text="Git" variant="gray" />
+      </Bullets>
+      <Bullets title="Methodologies">
+        <Tag client:load text="Design Thinking" variant="gray" />
+        <Tag client:load text="Atomic Design" variant="gray" />
+        <Tag client:load text="Mobile First" variant="gray" />
+        <Tag client:load text="Agile" variant="gray" />
+      </Bullets>
+    </div>
+  </div>
+  <div class="flex flex-col gap-6">
+    <TitleSymbol>Soft skills</TitleSymbol>
+    <div class="flex flex-wrap gap-y-2">
+      <Tag client:load text="Constantly changing" variant="gray" />
+      <Tag client:load text="Self-taught" variant="gray" />
+      <Tag client:load text="Problem solving" variant="gray" />
+      <Tag client:load text="Teamwork" variant="gray" />
+    </div>
+  </div>
+  <picture> </picture>
+</div>
