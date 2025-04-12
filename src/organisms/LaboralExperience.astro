@@ -1,0 +1,71 @@
+---
+import TitleSection from "../components/TitleSection.tsx";
+import TitleSymbol from "../components/TitleSymbol.astro";
+import ListItem from "../components/ListItem.tsx";
+---
+
+<section
+id="experience"
+class="w-full mx-auto pt-20"
+data-scroll="seccion2"
+>
+<TitleSection client:load text="experience" />
+<div class="px-5 pt-8">
+  <div class="grid grid-cols-1 gap-14 md:grid-cols-2">
+    <div>
+      <TitleSymbol>Education</TitleSymbol>
+      <ListItem
+        client:load
+        year="2024"
+        title="Ironhack"
+        subtitle="Industrial applications of machine learning and AI"
+      />
+      <ListItem
+        client:load
+        year="2023"
+        title="APPLE CODING ACADEMY"
+        subtitle="Swift Full Stack Bootcamp"
+      />
+      <ListItem
+        client:load
+        year="2021"
+        title="CICE, ESCUELA PROFESIONAL DE NUEVAS TECNOLOGIAS"
+        subtitle="App Development Master"
+      />
+      <ListItem
+        client:load
+        year="2018 - 2019"
+        title="CICE, ESCUELA PROFESIONAL DE NUEVAS TECNOLOGIAS"
+        subtitle="Web Design & Development Course"
+      />
+      <ListItem
+        client:load
+        year="2011 - 2015"
+        title="ESNE"
+        subtitle="Graphic and Multimedia Design Degree"
+      />
+    </div>
+    <div>
+      <TitleSymbol>Work</TitleSymbol>
+      <ListItem
+        client:load
+        year="2024 - today"
+        title="Freelance"
+        subtitle="Graphic designer & Frontend Developer"
+      />
+      <ListItem
+        client:load
+        year="2019 - 2024"
+        title="CHEIL WORLDWIDE"
+        subtitle="Visual & Web Layout designer"
+      />
+      <ListItem
+        client:load
+        year="2016 - 2019"
+        title="8BELTS"
+        subtitle="Graphic designer"
+      />
+    </div>
+  </div>
+</div>
+</section>
