@@ -1,83 +1,44 @@
 ---
 import TitleSection from "../components/TitleSection";
-import ProjectButton from "../components/ProjectButton.astro";
-import ProjectContent from "../components/ProjectContent.astro";
-import SquareImage from "../components/SquareImage.astro";
-import Button from "../components/Button";
-import Check from "../components/Check";
+import AccordionItem from "../components/AccordionItem.jsx";
 ---
 
 <section id="projects" class="w-full mx-auto pt-20" data-scroll="seccion1">
   <TitleSection client:load text="my vital experience" />
-  <div
-    id="accordion-flush"
-    data-accordion="collapse"
-    data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-    data-inactive-classes="text-gray-500 dark:text-gray-400"
-  >
-    <h2 id="accordion-flush-heading-1">
-      <button
-        type="button"
-        class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
-        data-accordion-target="#accordion-flush-body-1"
-        aria-expanded="false"
-        aria-controls="accordion-flush-body-1"
-      >
-        <ProjectButton
-          name="Dynamic Knowledge Hub"
-          highlight="React · Storybook"
-        />
-        <svg
-          data-accordion-icon
-          class="w-3 h-3 rotate-180 shrink-0 mr-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 10 6"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5 5 1 1 5"></path>
-        </svg>
-      </button>
-    </h2>
-    <div
-      id="accordion-flush-body-1"
-      class="hidden"
-      aria-labelledby="accordion-flush-heading-1"
-    >
-      <div class="border-b-2 border-gray-700">
-        <ProjectContent
-          synopsis="Escohotado Web"
-          description="This website will serve as the official central hub for the community of philosopher and thinker Escohotado."
-        >
-          <SquareImage
-            slot="picture"
-            mobileImgUrl="escohotado/project03-image-mobile.jpg"
-            desktopImgUrl="escohotado/project03-image-desktop.jpg"
-            alt="user profile picture"
-          />
-          <div slot="check" class="flex gap-x-5 pb-6 flex-wrap">
-            <Check text="React" />
-            <Check text="Storybook" />
-            <Check text="Motion.dev" />
-          </div>
-          <div slot="buttons">
-            <Button text="Go to Detail project" link="/projectCommunity">
-              <div slot="icon">
-                <img
-                  class="w-4 h-4"
-                  src="images/code-analysis.svg"
-                  alt="magnifying glass code icon"
-                />
-              </div>
-            </Button>
-          </div>
-        </ProjectContent>
-      </div>
-    </div>
+  <div class="w-full mx-auto">
+    <AccordionItem
+      client:load
+      name="Discovering Japan"
+      highlight="2007 - 2010"
+      synopsis="Living in Japan for 3 years"
+      description="I lived in Japan for 3 years and I can speak the language fairly well, I am interesting in keep speaking it, I love my Japan friends and their awesome culture"
+      mobileImgUrl="japan-mobile.png"
+      desktopImgUrl="japan-desktop.png"
+      alt="Photo collage of Japan"
+      checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
+    />
+    <AccordionItem
+      client:load
+      name="Discovering Poland"
+      highlight="2022 - 2024"
+      synopsis="Living in Japan for 3 years"
+      description="I lived in Japan for 3 years and I can speak the language fairly well, I am interesting in keep speaking it, I love my Japan friends and their awesome culture"
+      mobileImgUrl="japan-mobile.png"
+      desktopImgUrl="japan-desktop.png"
+      alt="Photo collage of Japan"
+      checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
+    />
+
+    <AccordionItem
+      client:load
+      name="Discovering Australia"
+      highlight="2015 - 2016"
+      synopsis="Traveling to Australia for 3 years"
+      description="I lived in Japan for 3 years and I can speak the language fairly well, I am interesting in keep speaking it, I love my Japan friends and their awesome culture"
+      mobileImgUrl="japan-mobile.png"
+      desktopImgUrl="japan-desktop.png"
+      alt="Photo collage of Japan"
+      checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
+    />
   </div>
 </section>

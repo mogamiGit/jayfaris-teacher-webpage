@@ -2,15 +2,17 @@
 import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import VitalExperience from "../organisms/VitalExperience.astro";
-import Tag from "../components/Tag.tsx";
-import H1 from "../components/H1.tsx";
-import H4 from "../components/H4.tsx";
 import SkillsSection from "../organisms/SkillsSection.astro";
 import ContactSection from "../organisms/ContactSection.astro";
 import InsightsSection from "../organisms/InsightsSection.astro";
 import LaboralExperience from "../organisms/LaboralExperience.astro";
 import AboutMe from "../organisms/AboutMe.astro";
+import ScrollToTopButton from "../components/ScrollToTopButton.tsx";
+import HeroSection from "../organisms/HeroSection.astro";
+import BookLessonSection from "../organisms/BookLessonSection.astro";
+
 const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
+
 ---
 
 <Layout
@@ -23,90 +25,22 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
     <a class="hover:font-bold duration-200" href="#contact">Contact me</a>
   </Header>
   <main>
-    <div
-      id="arrow-to-top"
-      class="fixed bottom-0 right-0 w-full flex justify-center items-center mb-10 hover:animate-bounce duration-1000 opacity-0 z-10"
-    >
-      <a href="#">
-        <svg
-          width="60"
-          height="60"
-          viewBox="0 0 60 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60ZM36.6582 39H41.25L32.7092 19.5H27.3367L18.75 39H23.3418L29.8622 24.0485H30.2296L36.6582 39Z"
-            fill="#FFD121"></path>
-        </svg>
-      </a>
-    </div>
-    <section
-      class="w-full mx-auto flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top"
-    >
-      <div
-        class="flex justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
-      >
-        <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
-          <H4 client:load text="Texas · English Teacher" />
-          <H1 client:load text="Hi, my name is Jay Faris" />
-        </div>
-        <p>
-            Well, I guess the best way to know me is to check out my <a href="https://www.youtube.com/@f-techenglish295" class="font-bold hover:underline duration-200 cursor-pointer" target="_blank">youtube channel</a>.</br></br>
-            And... I lived in Japan for eight years and I can speak the language fairly well.  I have also traveled to Australia, Hong Kong and Korea.  Traveling is something I like to talk about, but really I like to talk about anything, from politics to cooking or anything in between.  I like to let my students come up with the topics they want to talk about.</br></br>
-            My hobbies are Japanese Language, internal martial arts, film production (writing acting, editing and directing) stage combat and basic stunt work, basketball and gymnastics.
-
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-8 justify-center">
-        <img class="w-auto max-h-[500px] sm:pb-4" src="images/image-hero.png" alt="" />
-      </div>
-    </section>
-    <section id="book-a-leason" class="w-full mx-auto flex md:flex-row sm:flex-col justify-center gap-10 px-8 flex-wrap">
-        <a class="hover:font-bold duration-200 cursor-pointer" href={bookLeasonUrl} target="_blank">
-            <Tag
-              client:load
-              text="Book a lesson"
-              variant="yellow"
-              delay={0.5}
-            />
-          </a>
-    </section>
+    <HeroSection />
+    <BookLessonSection />
     <InsightsSection />
-    <section id="about" class="w-full mx-auto pt-20" data-scroll="seccion3">
-        <AboutMe />
-        <div class="pt-6 flex flex-col gap-12">
-          <VitalExperience />
-          <SkillsSection />
-        </div>
-      </section>
-
-    <div class="flex flex-col px-8">
-      <LaboralExperience />
-      <ContactSection />
-    </div>
-    <footer class="border-t px-6">
-      <div class="w-full mx-auto py-10 text-sm opacity-80">
-        <a href="https://mogamihub.xyz" target="_blank">
-            &#169; 2024 Design by Mónica Galán
-        </a>
-      </div>
-    </footer>
+    <AboutMe />
+    <VitalExperience />
+    <SkillsSection />
+    <LaboralExperience />
+    <ContactSection />
+    <ScrollToTopButton client:load />
   </main>
 
-  <script>
-    const myDiv = document.getElementById("arrow-to-top");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY === 0) {
-        myDiv.classList.add("opacity-0");
-        myDiv.classList.remove("opacity-100");
-      } else {
-        myDiv.classList.remove("opacity-0");
-        myDiv.classList.add("opacity-100");
-      }
-    });
-  </script>
+  <footer class="border-t px-6">
+    <div class="w-full mx-auto py-10 text-sm opacity-80">
+      <a href="https://mogamihub.xyz" target="_blank">
+          &#169; 2024 Design by Mónica Galán
+      </a>
+    </div>
+  </footer>
 </Layout>

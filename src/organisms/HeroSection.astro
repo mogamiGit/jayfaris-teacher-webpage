@@ -1,0 +1,26 @@
+---
+import H4 from "../components/H4.tsx";
+import H1 from "../components/H1.tsx";
+---
+
+<section
+  id="hero"
+  class="w-full mx-auto flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top pt-20 md:pt-0"
+>
+  <div
+    class="flex justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
+  >
+    <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
+      <H4 client:load text="Texas · English Teacher" />
+      <H1 client:load text="Hi, my name is Jay Faris" />
+    </div>
+    <p>
+        Well, I guess the best way to know me is to check out my <a href="https://www.youtube.com/@f-techenglish295" class="font-bold hover:underline duration-200 cursor-pointer" target="_blank">youtube channel</a>.</br></br>
+        And... I lived in Japan for eight years and I can speak the language fairly well.  I have also traveled to Australia, Hong Kong and Korea.  Traveling is something I like to talk about, but really I like to talk about anything, from politics to cooking or anything in between.  I like to let my students come up with the topics they want to talk about.</br></br>
+        My hobbies are Japanese Language, internal martial arts, film production (writing acting, editing and directing) stage combat and basic stunt work, basketball and gymnastics.
+    </p>
+  </div>
+  <div class="flex flex-col items-center gap-8 justify-center px-6 md:px-0">
+    <img class="w-auto max-h-[500px] sm:pb-4 pt-10 md:pt-0" src="images/image-hero.png" alt="Jay Faris smiling" />
+  </div>
+</section>

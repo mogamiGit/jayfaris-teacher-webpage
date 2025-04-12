@@ -1,0 +1,15 @@
+---
+import Tag from "../components/Tag.tsx";
+const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
+---
+
+<section id="book-a-lesson" class="w-full mx-auto flex md:flex-row sm:flex-col justify-center gap-10 px-8 py-10 flex-wrap">
+    <a class="hover:font-bold duration-200 cursor-pointer" href={bookLeasonUrl} target="_blank">
+        <Tag
+          client:load
+          text="Book a lesson"
+          variant="yellow"
+          delay={0.5}
+        />
+      </a>
+</section>
