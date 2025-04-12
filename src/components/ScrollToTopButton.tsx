@@ -39,7 +39,7 @@ const ScrollToTopButton: React.FC = () => {
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="fixed bottom-10 right-10 z-50 p-0 bg-transparent border-none cursor-pointer hover:scale-110 transition-transform duration-200"
+          className="p-0 bg-transparent border-none cursor-pointer hover:scale-110 transition-transform duration-200"
           aria-label="Scroll to top"
         >
           {/* SVG from index.astro */}

@@ -7,9 +7,8 @@ import ContactSection from "../organisms/ContactSection.astro";
 import InsightsSection from "../organisms/InsightsSection.astro";
 import LaboralExperience from "../organisms/LaboralExperience.astro";
 import AboutMe from "../organisms/AboutMe.astro";
-import ScrollToTopButton from "../components/ScrollToTopButton.tsx";
 import HeroSection from "../organisms/HeroSection.astro";
-import BookLessonSection from "../organisms/BookLessonSection.astro";
+import FixedActionButtons from "../components/FixedActionButtons.tsx";
 
 const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
 
@@ -26,14 +25,13 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
   </Header>
   <main>
     <HeroSection />
-    <BookLessonSection />
     <InsightsSection />
     <AboutMe />
     <VitalExperience />
     <SkillsSection />
     <LaboralExperience />
     <ContactSection />
-    <ScrollToTopButton client:load />
+    <FixedActionButtons client:load />
   </main>
 
   <footer class="border-t px-6">
