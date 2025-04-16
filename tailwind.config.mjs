@@ -7,19 +7,17 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'kalnia': ['kalnia', 'Georgia', 'serif'],
-				'hubot': ['Hubot-Sans', 'Helvetica', 'sans-serif']
+				'main': ['Kalnia', 'Georgia', 'serif'],
+				'secondary': ['Hubot-Sans', 'Helvetica', 'sans-serif']
 			},
 			borderWidth: {
 				'light' : '0.5px'
 			},
 		},
 		colors: {
-			'white': '#ffffff',
-			'blue-violet': '#4A68F0',
-			'yellow-chick': '#FFD121',
-			'medium-blue': '#222831',
-			'dark-blue': '#03001c',
+			'backgroundColor': '#FBF6E9',
+			'mainColor': '#161179',
+			'accentColor': '#D61E1B',
 		},
 	},
 	plugins: [

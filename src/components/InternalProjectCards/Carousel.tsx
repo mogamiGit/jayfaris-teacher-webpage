@@ -40,25 +40,25 @@ const Carousel: React.FC<Props> = ({ projects, autoSlide = false, autoSlideTime 
             return () => clearInterval(slideInterval);
       }, [autoSlide, autoSlideTime]);
 
-      const buttonArrowClass= 'h-14 w-16 flex items-center justify-center p-1 bg-white dark:bg-dark-blue text-gray-600 dark:text-white border-solid border hover:border-blue-violet dark:hover:border-blue-violet border-gray-300 dark:border-gray-700 transition-drop-shadow drop-shadow-[5px_10px_5px_rgba(74,104,240,0.1)] hover:drop-shadow-[10px_10px_10px_rgba(74,104,240,0.4)]';
+      const buttonArrowClass = 'h-14 w-16 flex items-center justify-center p-1 bg-white dark:bg-dark-blue text-gray-600 dark:text-white border-solid border hover:border-mainColor dark:hover:border-mainColor border-gray-300 dark:border-gray-700 transition-drop-shadow drop-shadow-[5px_10px_5px_rgba(74,104,240,0.1)] hover:drop-shadow-[10px_10px_10px_rgba(74,104,240,0.4)]';
 
       return (
             <div className="w-full flex flex-col items-center gap-6">
                   <div className="w-full relative overflow-hidden">
                         <div
                               className="flex transition-transform ease-out duration-500"
-                              style={{ transform: `translateX(-${currentSlide * 100}%)`}}
+                              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                         >
                               {projects.map((project, i) => (
                                     <div key={i} className="w-full flex-shrink-0">
-                                    <CardProject
-                                          title={project.title}
-                                          description={project.description}
-                                          linkImage={project.linkImage}
-                                          altImage={project.altImage}
-                                          buttons={project.buttons}
-                                          checks={project.checks}
-                                    />
+                                          <CardProject
+                                                title={project.title}
+                                                description={project.description}
+                                                linkImage={project.linkImage}
+                                                altImage={project.altImage}
+                                                buttons={project.buttons}
+                                                checks={project.checks}
+                                          />
                                     </div>
                               ))}
                         </div>
@@ -67,7 +67,7 @@ const Carousel: React.FC<Props> = ({ projects, autoSlide = false, autoSlideTime 
                                     onClick={prev}
                                     className={`${buttonArrowClass} rounded-tr-xl rounded-bl-md`}
                                     whileHover={{ y: -6, x: 6 }}
-                                    transition={{ type:"spring", damping: 20, stiffness: 100 }}
+                                    transition={{ type: "spring", damping: 20, stiffness: 100 }}
                               >
                                     <ArrowIcon className="transform rotate-180" />
                               </motion.button>
@@ -75,7 +75,7 @@ const Carousel: React.FC<Props> = ({ projects, autoSlide = false, autoSlideTime 
                                     onClick={next}
                                     className={`${buttonArrowClass} rounded-tl-xl rounded-br-md`}
                                     whileHover={{ y: -6, x: -6 }}
-                                    transition={{ type:"spring", damping: 20, stiffness: 100 }}
+                                    transition={{ type: "spring", damping: 20, stiffness: 100 }}
                               >
                                     <ArrowIcon />
                               </motion.button>

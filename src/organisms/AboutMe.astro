@@ -1,26 +1,39 @@
 ---
 import TitleSection from "../components/TitleSection.tsx";
 import SectionWrapper from "../components/SectionWrapper.astro";
+import InsightsSection from "./InsightsSection.astro";
 ---
 
-<SectionWrapper
-  id="about-me"
-  class="flex flex-col lg:flex-row-reverse gap-10 items-center"
-  data-scroll="seccion5"
->
-    <img
-      src="images/profile_photo.png"
-      alt="profile image"
-      class="max-w-80"
-    />
-    <div class="flex flex-col lg:flex-row gap-10">
+<div class="w-full">
+  <SectionWrapper
+    id="about-me"
+    class="grid grid-cols-2 gap-10"
+    data-scroll="seccion2"
+  >
+    <div>
+      <img
+        src="images/profile_photo.png"
+        alt="profile image"
+        class="max-w-80"
+      />
+      <InsightsSection client:load />
+    </div>
+    <div class="flex flex-col">
       <div>
         <TitleSection client:load text="about me" />
       </div>
       <p>
-        I am a third generation teacher from the state of Texas.  That is to say my grandfather was a teacher; my father is a teacher and I am a teacher.  And we were all licensed in the state of Texas.
-        <br /><br />My degree is in Theater and licenses are in Theater and History.  However, because my family owns and operates its own school I have had the opportunity to teach various subjects.  Among them were Drafting and Computer Aided Drafting, Reading, Writing, History (World and U.S.), Geography, Theater and Basic Japanese.
-        <br /><br />I have also taught English as a Second Language (ESL) in my family school and also in various schools in Tokyo.
+        I am a third generation teacher from the state of Texas. That is to say
+        my grandfather was a teacher; my father is a teacher and I am a teacher.
+        And we were all licensed in the state of Texas.
+        <br /><br />My degree is in Theater and licenses are in Theater and
+        History. However, because my family owns and operates its own school I
+        have had the opportunity to teach various subjects. Among them were
+        Drafting and Computer Aided Drafting, Reading, Writing, History (World
+        and U.S.), Geography, Theater and Basic Japanese.
+        <br /><br />I have also taught English as a Second Language (ESL) in my
+        family school and also in various schools in Tokyo.
       </p>
     </div>
-</SectionWrapper>
+  </SectionWrapper>
+</div>

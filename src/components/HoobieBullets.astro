@@ -1,0 +1,55 @@
+---
+import React from "react";
+import * as motion from "motion/react-client";
+import SectionWrapper from "../components/SectionWrapper.astro";
+import HobbieBullet from "./HobbieBullet";
+import MarkQuoteIcon from "../../public/images/markQuoteIcon";
+
+const imgFolder = "/public/images/illustrations/";
+---
+
+<SectionWrapper id="hobbie" class="grid grid-cols-2 gap-[6rem]">
+  <div>
+    <div class="relative p-5 h-auto flex flex-col gap-6">
+      <MarkQuoteIcon className="absolute top-0 left-0 -z-10 w-20 text-white" />
+      <p class="text-4xl leading-[3.5rem] italic">
+        己を知り、己に勝つ。七転び八起きの精神を胸に、真の武士は己の道を歩む
+      </p>
+      <p class="leading-6 text-gray-500">
+        Conócete a ti mismo y véncete a ti mismo. Llevando en el corazón el
+        espíritu de caer siete veces y levantarse ocho, el verdadero guerrero
+        sigue su propio camino.
+      </p>
+      <MarkQuoteIcon
+        className="absolute bottom-0 right-0 -z-10 w-20 text-white rotate-180"
+      />
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-6">
+    <HobbieBullet
+      title="Creative Arts & Film"
+      description="Passionate about storytelling through film production — including writing, acting, directing, and editing. Always exploring new ways to bring ideas to life on screen."
+      urlImage={imgFolder + "/illustration_film.svg"}
+      altImage="Illustration of a film clapboard in red and blue."
+      client:load
+    />
+    <HobbieBullet
+      title="Martial Arts & Movement"
+      description="Dedicated to internal martial arts, stage combat, and basic stunt work. I enjoy combining discipline and creativity through physical expression."
+      urlImage={imgFolder + "/illustration_ninja.svg"}
+      altImage="Illustration of a ninja dressed in red and blue performing a high kick."
+    />
+    <HobbieBullet
+      title="Japanese Language"
+      description="Lifelong learner of Japanese, fascinated by both the language and the culture. I believe learning a language is a gateway to new perspectives."
+      urlImage={imgFolder + "/illustration_japan.svg"}
+      altImage="Illustration of a red circle featuring the word 'Japan', accompanied by sushi and chopsticks."
+    />
+    <HobbieBullet
+      title="Sports & Fitness"
+      description="Basketball and gymnastics keep me active and balanced. I value teamwork, agility, and continuous growth — both physically and mentally."
+      urlImage={imgFolder + "/illustration_sport.svg"}
+      altImage="Illustration of a basketball in red and blue."
+    />
+  </div>
+</SectionWrapper>

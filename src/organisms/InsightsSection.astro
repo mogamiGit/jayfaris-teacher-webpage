@@ -4,20 +4,16 @@ import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
 <SectionWrapper
-    id="sintetic"
-    class="flex md:flex-row sm:flex-col justify-center gap-10 flex-wrap"
+  id="sintetic"
+  class="flex md:flex-row sm:flex-col justify-center gap-10 flex-wrap"
 >
-    <HighlightedTitle client:load title="Experience" subtitle="3º Generation of Teachers" />
-    <div class="border-r hidden md:block border-gray-300 w-3"></div>
-    <HighlightedTitle
-        client:load
-        title="Students"
-        subtitle="273"
-    />
-    <div class="border-r hidden md:block border-gray-300 w-3"></div>
-    <HighlightedTitle
-        client:load
-        title="Leasons"
-        subtitle="2860"
-    />
+  <HighlightedTitle
+    client:load
+    title="3º Generation"
+    subtitle="of Teachers"
+  />
+  <div class="border-r hidden md:block border-gray-300 w-3"></div>
+  <HighlightedTitle client:load title="273" subtitle="Students" />
+  <div class="border-r hidden md:block border-gray-300 w-3"></div>
+  <HighlightedTitle client:load title="2860" subtitle="Lessons" />
 </SectionWrapper>

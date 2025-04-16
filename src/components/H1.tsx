@@ -8,7 +8,7 @@ interface Props {
 }
 
 const H1: React.FC<Props> = ({ text, className }) => {
-  const titleClass = classNames("font-kalnia text-4xl sm:text-5xl lg:text-6xl text-wrap break-normal md:break-words", className)
+  const titleClass = classNames("font-main text-4xl sm:text-5xl lg:text-6xl text-wrap break-normal md:break-words", className)
 
   return (
     <motion.h1

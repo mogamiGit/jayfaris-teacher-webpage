@@ -7,14 +7,14 @@ interface Props {
 }
 
 const H4: React.FC<Props> = ({ text }) => {
-      const titleClass ="text-lg text-blue-violet"
+      const titleClass = "text-lg text-mainColor"
 
       return (
-            <motion.h2 
+            <motion.h2
                   className={titleClass}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ type: "tween", duration: 0.8, ease: "easeInOut", delay: 0.5}}
+                  transition={{ type: "tween", duration: 0.8, ease: "easeInOut", delay: 0.5 }}
                   viewport={{ once: true, amount: 0.5 }}
             >
                   {text}

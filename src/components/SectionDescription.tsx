@@ -12,7 +12,7 @@ interface Props {
 }
 
 const sectionDescription: React.FC<Props> = ({ title, description, tags = [], link, className }) => {
-  const titleClass = classNames('font-kalnia text-sm text-gray-500 capitalize');
+  const titleClass = classNames('font-main text-sm text-gray-500 capitalize');
   const containerClass = classNames('w-full flex flex-col',
     {
       'gap-0': tags.length === 0,
@@ -26,7 +26,7 @@ const sectionDescription: React.FC<Props> = ({ title, description, tags = [], li
         <p className={titleClass}>{title}</p>
         {description &&
           (link ? (
-            <a href={link} target="_blank" className="group whitespace-pre-line hover:underline hover:underline-offset-3 hover:text-blue-violet">
+            <a href={link} target="_blank" className="group whitespace-pre-line hover:underline hover:underline-offset-3 hover:text-mainColor">
               <div className="flex gap-0.5 items-center">
                 <p>{description}</p>
                 <ArrowDiagonalIcon className="translate-y-[1px] opacity-0 translate-x-[-5px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />

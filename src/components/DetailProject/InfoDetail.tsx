@@ -18,7 +18,7 @@ interface Props {
 }
 
 const InfoDetail: React.FC<Props> = ({ year, client, description, tags, button }) => {
-  const buttonClass = "group rounded border-2 dark:border dark:border-white border-dark-blue px-4 py-2 hover:border-blue-violet dark:hover:border-blue-violet transition-all ease-in-out flex gap-2 items-center";
+  const buttonClass = "group rounded border-2 dark:border dark:border-white border-dark-blue px-4 py-2 hover:border-mainColor dark:hover:border-mainColor transition-all ease-in-out flex gap-2 items-center";
 
   return (
     <div className="w-full grid gap-12 px-8 grid-cols-1 md:grid-cols-3 pb-10 md:pb-4">
@@ -38,7 +38,7 @@ const InfoDetail: React.FC<Props> = ({ year, client, description, tags, button }
               transition={{ scale: { type: "spring", bounce: 0.4, duration: 0.7 } }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              {button.text} <ArrowDiagonalIcon className="group-hover:text-blue-violet scale-90 group-hover:scale-110 ease-out duration-150" />
+              {button.text} <ArrowDiagonalIcon className="group-hover:text-mainColor scale-90 group-hover:scale-110 ease-out duration-150" />
             </motion.button>
           </a>
         }

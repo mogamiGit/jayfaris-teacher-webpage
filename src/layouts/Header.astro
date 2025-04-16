@@ -1,6 +1,5 @@
 ---
 import Logo from "../components/Logo.astro";
-import ThemeIcon from "../components/ThemeIcon.astro";
 ---
 
 <header id="header" class="sticky-menu py-1">
@@ -13,12 +12,11 @@ import ThemeIcon from "../components/ThemeIcon.astro";
         <div id="menu" class="menu menu-hidden flex flex-row">
           <a href="/" class="flex items-center gap-x-4">
             <Logo />
-            <p class="p-x-10 text-2xl font-semibold">Yaris</p> 
+            <p class="p-x-10 text-2xl font-semibold">Yaris</p>
           </a>
           <slot />
         </div>
       </div>
-      <ThemeIcon />
     </nav>
   </div>
 </header>
@@ -47,17 +45,21 @@ import ThemeIcon from "../components/ThemeIcon.astro";
     cursor: pointer;
     padding: 10px 16px;
   }
-  
-	header {
-		background-image: linear-gradient(to bottom, rgb(255, 255, 255,1), transparent);
-		box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
-	}
+
+  header {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255, 1),
+      transparent
+    );
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+  }
 
   @media (max-width: 599px) {
-		header {
-			background: rgba(255, 255, 255, 0.7);
-		}
-	}
+    header {
+      background: rgba(255, 255, 255, 0.7);
+    }
+  }
 
   @media (max-width: 1280px) {
     .menu {
@@ -111,7 +113,7 @@ import ThemeIcon from "../components/ThemeIcon.astro";
     menu.classList.toggle("menu-visible");
     menu.classList.toggle("menu-hidden");
     menuToggle.classList.toggle("rotate-90");
-    menuToggle.classList.toggle("text-blue-violet");
+    menuToggle.classList.toggle("text-mainColor");
   });
 
   document.addEventListener("click", (event) => {
@@ -120,16 +122,16 @@ import ThemeIcon from "../components/ThemeIcon.astro";
         menu.classList.remove("menu-visible");
         menu.classList.add("menu-hidden");
         menuToggle.classList.remove("rotate-90");
-        menuToggle.classList.remove("text-blue-violet");
+        menuToggle.classList.remove("text-mainColor");
       }
     }
   });
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     if (window.scrollY === 0) {
-      header.classList.remove('bg-opacity-80');
+      header.classList.remove("bg-opacity-80");
     } else {
-      header.classList.add('bg-opacity-80');
+      header.classList.add("bg-opacity-80");
     }
   });
 </script>

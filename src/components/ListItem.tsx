@@ -34,8 +34,8 @@ const ListItem: React.FC<Props> = ({ year, title, subtitle }) => {
     visible: { y: 0, opacity: 1 },
   };
 
-  return(
-    <motion.div 
+  return (
+    <motion.div
       className={containerClass}
       initial="hidden"
       whileInView="visible"
@@ -44,14 +44,14 @@ const ListItem: React.FC<Props> = ({ year, title, subtitle }) => {
     >
       <div className='basis-1/3 flex flex-start items-start'>
         <div className={yearClass}>
-          <motion.p 
+          <motion.p
             variants={colorAnimation}
             transition={{ duration: 0.3 }}
           >
             [
           </motion.p>
           <motion.p
-            className="font-kalnia font-bold"
+            className="font-main font-bold"
             variants={yearAnimation}
             transition={{
               scaleY: { duration: 0.5, type: "damping", bounce: 0.2 },
@@ -61,7 +61,7 @@ const ListItem: React.FC<Props> = ({ year, title, subtitle }) => {
           >
             {year}
           </motion.p>
-          <motion.p 
+          <motion.p
             variants={colorAnimation}
             transition={{ duration: 0.3 }}
           >
@@ -70,21 +70,21 @@ const ListItem: React.FC<Props> = ({ year, title, subtitle }) => {
         </div>
       </div>
       <div className="basis-2/3 w-full">
-        <motion.p 
+        <motion.p
           className="font-semibold uppercase text-lg pb-1"
           variants={titleVariants}
           transition={{
-            x: { type: "tween", duration: 0.6, ease: "easeOut", delay: 0.5 }, 
+            x: { type: "tween", duration: 0.6, ease: "easeOut", delay: 0.5 },
             opacity: { duration: 0.4, delay: 0.5 }
           }}
         >
           {title}
         </motion.p>
-        <motion.p 
-          className="text-sm text-blue-violet"
+        <motion.p
+          className="text-sm text-mainColor"
           variants={subtitleVariants}
           transition={{
-            y: { type: "tween", duration: 0.3, ease: "easeInOut", delay: 1.4 }, 
+            y: { type: "tween", duration: 0.3, ease: "easeInOut", delay: 1.4 },
             opacity: { duration: 0.2, delay: 1.4 }
           }}
         >

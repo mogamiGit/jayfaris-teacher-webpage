@@ -4,24 +4,51 @@ import H1 from "../components/H1.tsx";
 import SectionWrapper from "../components/SectionWrapper.astro";
 ---
 
-<SectionWrapper
-  id="hero"
-  class="flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top"
->
-  <div
-    class="flex w-full justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
+<div class="relative w-full">
+  <svg
+    width="1441"
+    height="953"
+    viewBox="0 0 1441 953"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="none"
+    class="absolute top-5 left-0 w-full h-[600px] md:h-full -z-10"
   >
-    <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
-      <H4 client:load text="Texas · English Teacher" />
-      <H1 client:load text="Hi, my name is Jay Faris" />
+    <path
+      d="M1440.78 881.287V160.233L1413.78 154.933C1387.78 149.233 1334.08 139.233 1280.78 138.933C1227.78 139.233 1174.08 149.233 1120.78 170.933C1112.78 174.146 1104.77 177.603 1096.75 181.065C1051.58 200.552 1006.04 220.205 960.776 197.533C937.491 185.978 914.071 162.901 890.609 139.782C860.668 110.278 830.659 80.7078 800.776 74.933C768.518 68.4206 736.001 89.5802 703.472 110.747C682.556 124.358 661.636 137.971 640.776 144.233C592.897 158.687 544.447 133.969 496.237 109.373C491.08 106.742 485.926 104.113 480.776 101.533C427.776 75.233 374.076 53.2331 320.776 85.5331C301.168 97.261 281.464 116.421 261.72 135.62C228.096 168.316 194.357 201.124 160.776 197.533C107.776 192.233 54.0761 96.2331 27.4761 48.2331L0.776123 0.233002V893.08L13.1927 883.375C40.3407 861.675 95.147 819.675 149.239 840.675C173.489 850.036 197.82 872.314 222.132 894.576C252.359 922.253 282.557 949.903 312.535 952.675C345.352 955.691 378.318 929.956 411.186 904.297C432.8 887.424 454.372 870.584 475.832 861.975C525.598 842.488 575.706 867.611 625.296 892.475C629.911 894.789 634.522 897.101 639.128 899.374C693.526 925.674 748.332 947.675 802.424 925.975C825.357 916.995 848.362 900.427 871.355 883.868C902.904 861.146 934.432 838.44 965.721 835.375C1005.52 831.205 1045.53 858.984 1085.32 886.61C1099.92 896.747 1114.5 906.864 1129.02 915.374C1183.42 947.674 1238.22 957.675 1292.31 947.375C1346.71 936.675 1401.52 904.675 1428.05 888.675L1440.78 881.287Z"
+      fill="#FFF"></path>
+  </svg>
+  <SectionWrapper
+    id="hero"
+    class="relative flex flex-col-reverse md:flex-row justify-between sm:items-center gap-x-10 items-top"
+  >
+    <div
+      class="flex w-full justify-center flex-col px-6 md:py-6 xl:px-0 space-y-6 gap-4 md:gap-2 lg:max-w-md md:max-w-sm"
+    >
+      <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
+        <H4 client:load text="Texas · English Teacher" />
+        <H1 client:load text="Hi, my name is Jay Faris" />
+      </div>
+      <p>
+        Well, I guess the best way to know me is to check out my
+        <a
+          href="https://www.youtube.com/@f-techenglish295"
+          class="font-bold hover:underline duration-200 cursor-pointer"
+          target="_blank">youtube channel</a
+        >.<br /><br />
+        And... I lived in Japan for eight years and I can speak the language fairly
+        well. I have also traveled to Australia, Hong Kong and Korea. Traveling is
+        something I like to talk about, but really I like to talk about anything,
+        from politics to cooking or anything in between. I like to let my students
+        come up with the topics they want to talk about.<br /><br />
+      </p>
     </div>
-    <p>
-        Well, I guess the best way to know me is to check out my <a href="https://www.youtube.com/@f-techenglish295" class="font-bold hover:underline duration-200 cursor-pointer" target="_blank">youtube channel</a>.</br></br>
-        And... I lived in Japan for eight years and I can speak the language fairly well.  I have also traveled to Australia, Hong Kong and Korea.  Traveling is something I like to talk about, but really I like to talk about anything, from politics to cooking or anything in between.  I like to let my students come up with the topics they want to talk about.</br></br>
-        My hobbies are Japanese Language, internal martial arts, film production (writing acting, editing and directing) stage combat and basic stunt work, basketball and gymnastics.
-    </p>
-  </div>
-  <div class="flex flex-col items-center gap-8 justify-center px-6 md:px-0">
-    <img class="w-auto max-h-[500px] sm:pb-4 pt-10 md:pt-0" src="images/image-hero.png" alt="Jay Faris smiling" />
-  </div>
-</SectionWrapper>
+    <div class="flex flex-col items-center gap-8 justify-center px-6 md:px-0">
+      <img
+        class="w-auto max-h-[500px] sm:pb-4 pt-10 md:pt-0"
+        src="images/image-hero.png"
+        alt="Jay Faris smiling"
+      />
+    </div>
+  </SectionWrapper>
+</div>

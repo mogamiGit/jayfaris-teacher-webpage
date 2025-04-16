@@ -13,7 +13,7 @@ interface Props {
 const DropdownCard: React.FC<Props> = ({ title, description, emoji, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const containerClass = classNames('rounded-md w-full flex flex-col justify-center bg-white dark:bg-dark-blue dark:drop-shadow-[0px_5px_10px_rgba(74,104,240,0.4)] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)] cursor-pointer border dark:border-blue-violet border-gray-400 py-4', className)
+  const containerClass = classNames('rounded-md w-full flex flex-col justify-center bg-white dark:bg-dark-blue dark:drop-shadow-[0px_5px_10px_rgba(74,104,240,0.4)] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)] cursor-pointer border dark:border-mainColor border-gray-400 py-4', className)
 
   return (
     <motion.div
@@ -30,7 +30,7 @@ const DropdownCard: React.FC<Props> = ({ title, description, emoji, className })
           transition={{ duration: 0.5, type: "linear" }}
         >{emoji}</motion.p>
         <motion.p className="w-full text-lg leading-[1.2] font-semibold line-clamp-2 break-words">{title}</motion.p>
-        <ArrowLinkIcon className={`animate-pulse text-blue-violet dark:text-white ${isOpen ? "rotate-90" : "rotate-0"}`} />
+        <ArrowLinkIcon className={`animate-pulse text-mainColor dark:text-white ${isOpen ? "rotate-90" : "rotate-0"}`} />
       </motion.div>
       {isOpen && (
         <div className="flex flex-col justify-center gap-4 grow px-6">

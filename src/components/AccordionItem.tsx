@@ -14,15 +14,15 @@ interface Props {
   checkItems: string[];
 }
 
-const AccordionItem: React.FC<Props> = ({ 
-    name, 
-    highlight, 
-    synopsis, 
-    description, 
-    mobileImgUrl, 
-    desktopImgUrl, 
-    alt, 
-    checkItems 
+const AccordionItem: React.FC<Props> = ({
+  name,
+  highlight,
+  synopsis,
+  description,
+  mobileImgUrl,
+  desktopImgUrl,
+  alt,
+  checkItems
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,11 +40,11 @@ const AccordionItem: React.FC<Props> = ({
         >
           {/* Replicated ProjectButton.astro structure */}
           <div className="flex flex-col items-start px-8 gap-2 text-left">
-            <p className="font-kalnia text-3xl">
-                {name}
+            <p className="font-main text-3xl">
+              {name}
             </p>
-            <p className="text-yellow-chick">
-                {highlight}
+            <p className="text-accentColor">
+              {highlight}
             </p>
           </div>
 
@@ -88,30 +88,30 @@ const AccordionItem: React.FC<Props> = ({
           >
             {/* Replicated ProjectContent.astro structure */}
             <div className="pb-5 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                    {/* Replicated SquareImage.astro structure */}
-                    <picture className="m-0 p-5 md:p-10 w-full flex md:justify-start justify-center md:w-1/2">
-                        <source media="(max-width: 799px)" srcSet={mobileSrc} />
-                        <source media="(min-width: 800px)" srcSet={desktopSrc} />
-                        <img src={desktopSrc} alt={alt} className="max-w-full h-auto" />
-                    </picture>
-                    {/* Content Details */}
-                    <div className="w-full md:w-1/2 flex flex-col flex-start items-start gap-6 p-5 md:p-10">
-                        <p className="text-2xl font-semibold">
-                            {synopsis}
-                        </p>
-                        <p>
-                            {description}
-                        </p>
-                        {/* Check Items */}
-                        <div className="flex gap-x-5 pb-6 flex-wrap">
-                            {checkItems.map((item, index) => (
-                                <Check key={index} text={item} />
-                            ))}
-                        </div>
-                        {/* Placeholder for potential future buttons slot */}
-                    </div>
+              <div className="flex flex-col md:flex-row justify-between items-center">
+                {/* Replicated SquareImage.astro structure */}
+                <picture className="m-0 p-5 md:p-10 w-full flex md:justify-start justify-center md:w-1/2">
+                  <source media="(max-width: 799px)" srcSet={mobileSrc} />
+                  <source media="(min-width: 800px)" srcSet={desktopSrc} />
+                  <img src={desktopSrc} alt={alt} className="max-w-full h-auto" />
+                </picture>
+                {/* Content Details */}
+                <div className="w-full md:w-1/2 flex flex-col flex-start items-start gap-6 p-5 md:p-10">
+                  <p className="text-2xl font-semibold">
+                    {synopsis}
+                  </p>
+                  <p>
+                    {description}
+                  </p>
+                  {/* Check Items */}
+                  <div className="flex gap-x-5 pb-6 flex-wrap">
+                    {checkItems.map((item, index) => (
+                      <Check key={index} text={item} />
+                    ))}
+                  </div>
+                  {/* Placeholder for potential future buttons slot */}
                 </div>
+              </div>
             </div>
           </motion.div>
         )}
