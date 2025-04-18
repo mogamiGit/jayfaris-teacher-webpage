@@ -13,6 +13,15 @@ export default {
 			borderWidth: {
 				'light' : '0.5px'
 			},
+      maskImage: {
+        wave: "url('/public/images/wave-mask.svg')",
+      },
+      maskSize: {
+        cover: '100% 100%',
+      },
+      maskRepeat: {
+        'no-repeat': 'no-repeat',
+      },
 		},
 		colors: {
 			'backgroundColor': '#FBF6E9',
@@ -23,6 +32,13 @@ export default {
 	plugins: [
 		require('flowbite/plugin'),
 		require('tailwindcss-animated'),
-		require('@tailwindcss/aspect-ratio')
+		require('@tailwindcss/aspect-ratio'),
+    function ({ addUtilities, theme }) {
+      const masks = theme('maskImage');
+      const newUtils = Object.entries(masks).map(([name, url]) => {
+        return [`.mask-${name}`, { maskImage: url, WebkitMaskImage: url }];
+      });
+      addUtilities(Object.fromEntries(newUtils));
+    },
 	],
 }

@@ -2,7 +2,7 @@
 import Logo from "../components/Logo.astro";
 ---
 
-<header id="header" class="sticky-menu py-1">
+<header id="header" class="sticky-menu py-1 bg-white">
   <div class="max-w-[1240px] mx-auto items-start">
     <nav class="w-full flex justify-between">
       <div class="w-full flex my-auto">
@@ -44,21 +44,6 @@ import Logo from "../components/Logo.astro";
     display: none;
     cursor: pointer;
     padding: 10px 16px;
-  }
-
-  header {
-    background-image: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255, 1),
-      transparent
-    );
-    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 599px) {
-    header {
-      background: rgba(255, 255, 255, 0.7);
-    }
   }
 
   @media (max-width: 1280px) {
