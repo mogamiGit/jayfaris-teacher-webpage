@@ -39,24 +39,25 @@ const ScrollToTopButton: React.FC = () => {
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="p-0 bg-transparent border-none cursor-pointer hover:scale-110 transition-transform duration-200"
+          className="p-0 bg-transparent border-none cursor-pointer text-mainColor"
           aria-label="Scroll to top"
         >
-          {/* SVG from index.astro */}
-          <svg
+          <motion.svg
             width="60"
             height="60"
             viewBox="0 0 60 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            whileHover={{ scale: 0.9 }}
+            transition={{ duration: 0.2 }}
           >
             <path
               fillRule="evenodd"
               clipRule="evenodd"
               d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60ZM36.6582 39H41.25L32.7092 19.5H27.3367L18.75 39H23.3418L29.8622 24.0485H30.2296L36.6582 39Z"
-              fill="#FFD121" // Assuming accentColor color
+              fill="currentColor"
             ></path>
-          </svg>
+          </motion.svg>
         </motion.button>
       )}
     </AnimatePresence>

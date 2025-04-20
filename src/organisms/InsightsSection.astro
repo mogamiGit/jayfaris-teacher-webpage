@@ -5,15 +5,16 @@ import SectionWrapper from "../components/SectionWrapper.astro";
 
 <SectionWrapper
   id="sintetic"
-  class="flex md:flex-row sm:flex-col justify-center gap-10 flex-wrap"
+  class="flex flex-col sm:flex-row justify-center items-center gap-14 flex-wrap px-6"
 >
   <HighlightedTitle
     client:load
     title="3º Generation"
     subtitle="of Teachers"
+    className="text-gray-800"
   />
-  <div class="border-r hidden md:block border-gray-300 w-3"></div>
+  <p class="font-main text-6xl text-gray-800">·</p>
   <HighlightedTitle client:load title="273" subtitle="Students" />
-  <div class="border-r hidden md:block border-gray-300 w-3"></div>
+  <p class="font-main text-6xl text-gray-800">·</p>
   <HighlightedTitle client:load title="2860" subtitle="Lessons" />
 </SectionWrapper>

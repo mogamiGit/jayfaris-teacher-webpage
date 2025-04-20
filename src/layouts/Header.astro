@@ -2,19 +2,24 @@
 import Logo from "../components/Logo.astro";
 ---
 
-<header id="header" class="sticky-menu py-1 bg-white">
+<header
+  id="header"
+  class="sticky-menu py-1 bg-white border border-b-2 border-backgroundColor"
+>
   <div class="max-w-[1240px] mx-auto items-start">
     <nav class="w-full flex justify-between">
       <div class="w-full flex my-auto">
         <div id="menu-toggle">
           <span class="text-3xl">+</span>
         </div>
-        <div id="menu" class="menu menu-hidden flex flex-row">
-          <a href="/" class="flex items-center gap-x-4">
+        <div id="menu" class="w-full menu menu-hidden flex">
+          <a href="/" class="flex items-center gap-4">
             <Logo />
-            <p class="p-x-10 text-2xl font-semibold">Yaris</p>
+            <p class="font-main p-x-10 text-3xl text-gray-700">Faris</p>
           </a>
-          <slot />
+          <div class="w-full flex justify-center gap-8">
+            <slot />
+          </div>
         </div>
       </div>
     </nav>
@@ -36,7 +41,6 @@ import Logo from "../components/Logo.astro";
 
   .menu {
     transition: transform 0.3s ease-in-out;
-    gap: 2rem;
   }
 
   #menu-toggle {
@@ -108,14 +112,6 @@ import Logo from "../components/Logo.astro";
         menuToggle.classList.remove("rotate-45");
         menuToggle.classList.remove("text-mainColor");
       }
-    }
-  });
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY === 0) {
-      header.classList.remove("bg-opacity-80");
-    } else {
-      header.classList.add("bg-opacity-80");
     }
   });
 </script>

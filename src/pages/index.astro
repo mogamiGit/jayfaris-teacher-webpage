@@ -10,8 +10,10 @@ import HeroSection from "../organisms/HeroSection.astro";
 import SocialLinksSection from "../organisms/SocialLinksSection.astro";
 import FixedActionButtons from "../components/FixedActionButtons.tsx";
 import HoobieBullets from "../components/HoobieBullets.astro";
+import CalendarIcon from "../../public/images/calendarIcon";
+import InsightsSection from "../organisms/InsightsSection.astro";
 
-const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
+const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
 ---
 
 <Layout
@@ -19,13 +21,31 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
   description="Learn US English with Jay Faris. Personalized lessons and resources for all levels."
 >
   <Header>
-    <a class="hover:font-bold duration-200" href={bookLeasonUrl} target="_blank">Book a lesson</a>
-    <a class="hover:font-bold duration-200" href="#experience">Experience</a>
-    <a class="hover:font-bold duration-200" href="#contact">Contact me</a>
+    <a
+      class="hover:font-bold hover:text-accentColor duration-200 flex items-center gap-2"
+      href={bookLeasonUrl}
+      target="_blank"
+    >
+      <CalendarIcon className="w-5 pb-1" />
+      <span>Book a lesson</span>
+    </a>
+    <a
+      class="hover:font-bold hover:text-accentColor duration-200"
+      href="#about-me">About Me</a
+    >
+    <a
+      class="hover:font-bold hover:text-accentColor duration-200"
+      href="#experience">Experience</a
+    >
+    <a
+      class="hover:font-bold hover:text-accentColor duration-200"
+      href="#contact">Contact me</a
+    >
   </Header>
 
-  <main class="flex flex-col gap-[8rem]">
+  <main class="flex flex-col gap-[5rem] md:gap-[8rem]">
     <HeroSection />
+    <InsightsSection />
     <HoobieBullets />
     <SocialLinksSection />
     <AboutMe />
@@ -39,7 +59,7 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno"
   <footer class="border-t px-6">
     <div class="w-full mx-auto py-10 text-sm opacity-80">
       <a href="https://mogamihub.xyz" target="_blank">
-          &#169; 2024 Design by Mónica Galán
+        &#169; 2024 Design by Mónica Galán
       </a>
     </div>
   </footer>

@@ -4,7 +4,7 @@ import FixedBookLessonButton from './FixedBookLessonButton';
 
 const FixedActionButtons: React.FC = () => {
   return (
-    <div className="fixed bottom-10 right-10 z-50 flex flex-row items-end gap-4">
+    <div className="w-full fixed bottom-0 right-0 z-50 flex flex-row justify-between items-center gap-6 p-6">
       <ScrollToTopButton />
       <FixedBookLessonButton />
     </div>

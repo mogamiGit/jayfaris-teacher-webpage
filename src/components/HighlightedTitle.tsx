@@ -1,15 +1,17 @@
 import React from 'react';
 import * as motion from "motion/react-client";
+import classNames from 'classnames';
 
 interface Props {
   title: string;
   subtitle: string;
+  className?:string;
 }
 
-const HighlightedTitle: React.FC<Props> = ({ title, subtitle }) => {
-  const containerClass = "flex flex-col justify-center items-center gap-1 lg:py-0 md:py-5";
+const HighlightedTitle: React.FC<Props> = ({ title, subtitle, className }) => {
+  const containerClass = "flex flex-col justify-center items-center lg:py-0 md:py-5 gap-1";
 
-  const titleClass = "text-3xl text-accentColor";
+  const titleClass = classNames("font-main text-4xl sm:text-6xl text-accentColor", className);
 
   return (
     <div className={containerClass}>
@@ -22,7 +24,7 @@ const HighlightedTitle: React.FC<Props> = ({ title, subtitle }) => {
       >
         {title}
       </motion.p>
-      <p className='text-sm text-gray-600'>{subtitle}</p>
+      <p className='text-xl text-gray-600'>{subtitle}</p>
     </div>
   );
 };
