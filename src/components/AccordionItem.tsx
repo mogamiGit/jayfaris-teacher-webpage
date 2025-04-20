@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Check from './Check'; // Assuming Check.tsx is in the same directory
+import Check from './Check';
 
-// Combined Props from AccordionItem.astro and AccordionItemContent.astro
 interface Props {
   name: string;
   highlight: string;
@@ -40,7 +39,7 @@ const AccordionItem: React.FC<Props> = ({
         >
           {/* Replicated ProjectButton.astro structure */}
           <div className="flex flex-col items-start px-8 gap-2 text-left">
-            <p className="font-main text-3xl">
+            <p className="font-main text-4xl">
               {name}
             </p>
             <p className="text-accentColor">

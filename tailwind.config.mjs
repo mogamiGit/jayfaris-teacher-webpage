@@ -7,8 +7,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'main': ['Kalnia', 'Georgia', 'serif'],
-				'secondary': ['Hubot-Sans', 'Helvetica', 'sans-serif']
+				'main': ['Kirang Haerang', 'system-ui'],
+				'secondary': ['Nunito', 'Helvetica', 'sans-serif']
 			},
 			borderWidth: {
 				'light' : '0.5px'

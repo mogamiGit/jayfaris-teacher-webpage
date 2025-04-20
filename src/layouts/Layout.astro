@@ -18,7 +18,7 @@ const { description } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=main:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
@@ -29,28 +29,19 @@ const { description } = Astro.props;
   </body>
 
   <style is:global>
-    @font-face {
-      font-family: "Hubot Sans";
-      src:
-        url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
-        url("/fonts/Hubot-Sans.woff2") format("woff2-variations");
-      font-weight: 200 900;
-      font-stretch: 75% 125%;
-    }
-
     html {
-      font-family: "Hubot Sans", system-ui, sans-serif;
+      font-family: "Nunito", system-ui, sans-serif;
       scroll-behavior: smooth;
       animation: ease-in;
       animation-duration: 1000ms;
-      background-color: #FBF6E9;
+      background-color: #fbf6e9;
     }
 
     body {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      font-size: medium;
+      font-size: 1.1rem;
       line-height: 2;
     }
 

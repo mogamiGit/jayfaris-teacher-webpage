@@ -8,7 +8,7 @@ interface Props {
 }
 
 const H1: React.FC<Props> = ({ text, className }) => {
-  const titleClass = classNames("font-main text-4xl sm:text-5xl lg:text-6xl text-wrap break-normal md:break-words", className)
+  const titleClass = classNames("font-main text-7xl md:text-8xl text-wrap break-normal md:break-words", className)
 
   return (
     <motion.h1
@@ -17,7 +17,7 @@ const H1: React.FC<Props> = ({ text, className }) => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "tween", duration: 0.5, ease: "easeIn" }}
       viewport={{ once: true, amount: 0.5 }}
-      style={{ lineHeight: "1.2" }}
+      style={{ lineHeight: 0.9 }}
     >
       {text}
     </motion.h1>

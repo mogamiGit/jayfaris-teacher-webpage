@@ -10,11 +10,17 @@ import SectionWrapper from "../components/SectionWrapper.astro";
     class="min-h-[650px] flex flex-col lg:flex-row justify-center items-center lg:items-end items-top"
   >
     <div
-      class="flex w-full h-full flex-col pt-[6rem] sm:pt-8 lg:pb-6 gap-4 lg:gap-2 lg:max-w-[550px] px-8 lg:mb-5"
+      class="flex w-full h-full flex-col pt-[6rem] sm:pt-8 lg:pb-6 gap-4 lg:max-w-[550px] px-8 lg:mb-5"
     >
-      <div class="sm:mt-20 md:mt-35 flex flex-col gap-2">
-        <H4 client:load text="Texas · English Teacher" />
-        <H1 client:load text="Hi, my name is Jay Faris" />
+      <div class="sm:mt-20 md:mt-35 flex flex-col">
+        <H4 client:load>
+          Texas <span class="text-black">·</span> English Teacher
+        </H4>
+        <H1
+          client:load
+          text="Hi, my name is Jay Faris"
+          className="text-mainColor"
+        />
       </div>
       <p>
         Well, I guess the best way to know me is to check out my
