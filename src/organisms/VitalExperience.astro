@@ -1,48 +1,25 @@
 ---
 import TitleSection from "../components/TitleSection";
-import AccordionItem from "../components/AccordionItem.jsx";
 import SectionWrapper from "../components/SectionWrapper.astro";
+import MapPinCard from "../components/MapPinCard";
+import { mapPinCards } from "../data/mapPinCards";
 ---
 
-<SectionWrapper
-  id="projects"
-  data-scroll="seccion1"
->
-  <TitleSection client:load text="my vital experience" />
-  <div>
-    <AccordionItem
-      client:load
-      name="Discovering Japan"
-      highlight="2007 - 2010"
-      synopsis="Living in Japan for 3 years"
-      description="I lived in Japan for 3 years and I can speak the language fairly well, I am interesting in keep speaking it, I love my Japan friends and their awesome culture"
-      mobileImgUrl="japan-mobile.png"
-      desktopImgUrl="japan-desktop.png"
-      alt="Photo collage of Japan"
-      checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
-    />
-    <AccordionItem
-      client:load
-      name="Discovering Poland"
-      highlight="2022 - 2024"
-      synopsis="Living in Japan for 3 years"
-      description="I lived in Japan for 3 years and I can speak the language fairly well, I am interesting in keep speaking it, I love my Japan friends and their awesome culture"
-      mobileImgUrl="japan-mobile.png"
-      desktopImgUrl="japan-desktop.png"
-      alt="Photo collage of Japan"
-      checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
-    />
-
-    <AccordionItem
-      client:load
-      name="Discovering Australia"
-      highlight="2015 - 2016"
-      synopsis="Traveling to Australia for 3 years"
-      description="I lived in Japan for 3 years and I can speak the language fairly well, I am interesting in keep speaking it, I love my Japan friends and their awesome culture"
-      mobileImgUrl="japan-mobile.png"
-      desktopImgUrl="japan-desktop.png"
-      alt="Photo collage of Japan"
-      checkItems={["Learning Japanese", "Traveling", "Hobbies"]}
-    />
+<SectionWrapper id="vitalExperience" data-scroll="seccion1">
+  <TitleSection client:load text="My vital experience" />
+  <div class="overflow-x-auto snap-x snap-mandatory">
+    <div class="flex gap-10 min-w-max py-8">
+      {
+        mapPinCards.map((card) => (
+          <MapPinCard
+            client:load
+            title={card.title}
+            description={card.description}
+            date={card.date}
+            rotate={card.rotate}
+          />
+        ))
+      }
+    </div>
   </div>
 </SectionWrapper>

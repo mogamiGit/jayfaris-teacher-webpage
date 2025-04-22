@@ -2,9 +2,7 @@
 import Header from "../layouts/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import VitalExperience from "../organisms/VitalExperience.astro";
-import SkillsSection from "../organisms/SkillsSection.astro";
 import ContactSection from "../organisms/ContactSection.astro";
-import LaboralExperience from "../organisms/LaboralExperience.astro";
 import AboutMe from "../organisms/AboutMe.astro";
 import HeroSection from "../organisms/HeroSection.astro";
 import SocialLinksSection from "../organisms/SocialLinksSection.astro";
@@ -12,6 +10,7 @@ import FixedActionButtons from "../components/FixedActionButtons.tsx";
 import HoobieBullets from "../components/HoobieBullets.astro";
 import CalendarIcon from "../../public/images/calendarIcon";
 import InsightsSection from "../organisms/InsightsSection.astro";
+import MapPinCard from "../components/MapPinCard";
 
 const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
 ---
@@ -47,11 +46,9 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
     <HeroSection />
     <InsightsSection />
     <HoobieBullets />
-    <SocialLinksSection />
     <AboutMe />
+    <SocialLinksSection />
     <VitalExperience />
-    <SkillsSection />
-    <LaboralExperience />
     <ContactSection />
     <FixedActionButtons client:load />
   </main>

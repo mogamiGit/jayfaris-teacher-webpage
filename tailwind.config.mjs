@@ -27,6 +27,7 @@ export default {
 			'backgroundColor': '#FBF6E9',
 			'mainColor': '#161179',
 			'accentColor': '#D61E1B',
+      'opacityAccentColor': 'rgba(214,30,27,0.1)',
 		},
 	},
 	plugins: [
