@@ -9,7 +9,7 @@ interface Props {
 }
 
 const TitleSection: React.FC<Props> = ({ text, className }) => {
-  const containerClass = classNames("flex gap-1 text-mainColor text-5xl font-thin pb-5 text-nowrap", className)
+  const containerClass = classNames("flex gap-1 font-main text-mainColor text-6xl font-thin pb-5 text-nowrap", className)
 
   return (
     <div className={containerClass}>
@@ -18,7 +18,7 @@ const TitleSection: React.FC<Props> = ({ text, className }) => {
       </p>
       <motion.div
         className='w-3 text-accentColor'
-        animate={{ y: [0, -10, 0], fontWeight: [300, 500, 300] }}
+        animate={{ y: [0, -10, 0] }}
         transition={{
           type: "tween",
           duration: 1,

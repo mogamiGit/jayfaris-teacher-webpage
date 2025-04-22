@@ -1,142 +1,50 @@
 ---
-// src/organisms/SocialLinksSection.astro
 import SectionWrapper from "../components/SectionWrapper.astro";
-import IconLink from "../components/IconLink.astro";
+
 import {
   YOUTUBE_URL,
   INSTAGRAM_URL,
   FACEBOOK_URL,
   X_URL,
   EMAIL_URL,
-  BOOK_LESSON_URL,
 } from "../constants/urls";
+
+import SocialIcon from "../components/SocialIcon";
 ---
 
 <SectionWrapper id="social-links" class="w-full">
   <div
-    class="max-w-fit mx-auto flex justify-center items-center flex-wrap gap-x-4 gap-y-4 px-4 py-2 rounded bg-[rgba(214,30,27,0.1)] border border-accentColor"
+    class="max-w-fit mx-auto flex justify-center items-center flex-wrap gap-4"
   >
-    <IconLink
+    <SocialIcon
+      label="Youtube"
+      iconSrc="/public/images/social_media/Youtube.svg"
       href={YOUTUBE_URL}
-      ariaLabel="Visit my YouTube channel"
-      title="YouTube"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-youtube"
-        ><path
-          d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
-        ></path><path d="m10 15 5-3-5-3z"></path></svg
-      >
-    </IconLink>
-    <IconLink
+      client:load
+    />
+    <SocialIcon
+      label="Instagram"
+      iconSrc="/public/images/social_media/Instagram.svg"
       href={INSTAGRAM_URL}
-      ariaLabel="Visit my Instagram profile"
-      title="Instagram"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-instagram"
-        ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path
-          d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line
-          x1="17.5"
-          x2="17.51"
-          y1="6.5"
-          y2="6.5"></line></svg
-      >
-    </IconLink>
-    <IconLink
+      client:load
+    />
+    <SocialIcon
+      label="Facebook"
+      iconSrc="/public/images/social_media/Facebook.svg"
       href={FACEBOOK_URL}
-      ariaLabel="Visit my Facebook page"
-      title="Facebook"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-facebook"
-        ><path
-          d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-        ></path></svg
-      >
-    </IconLink>
-    <IconLink href={X_URL} ariaLabel="Visit my X profile" title="X">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-twitter"
-        ><path
-          d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.9 3.3 4.9s-5.2-.6-7.1-.6c-1.9 0-7.1.6-7.1.6s1.7-3.5 3.3-4.9C6.7 6.1 6 4 6 4s2.1 1.6 5.1 1.6c3 0 5.1-1.6 5.1-1.6z"
-        ></path></svg
-      >
-    </IconLink>
-
-    <IconLink href={EMAIL_URL} ariaLabel="Send me an email" title="Email">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-mail"
-        ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-          d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-      >
-    </IconLink>
-    <IconLink
-      href={BOOK_LESSON_URL}
-      ariaLabel="Book a lesson on Calendly"
-      title="Book Lesson"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-calendar-plus"
-        ><path d="M8 2v4"></path><path d="M16 2v4"></path><path
-          d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"
-        ></path><path d="M3 10h18"></path><path d="M16 19h6"></path><path
-          d="M19 16v6"></path></svg
-      >
-    </IconLink>
+      client:load
+    />
+    <SocialIcon
+      label="X"
+      iconSrc="/public/images/social_media/X.svg"
+      href={X_URL}
+      client:load
+    />
+    <SocialIcon
+      label="Email"
+      iconSrc="/public/images/social_media/Email.svg"
+      href={EMAIL_URL}
+      client:load
+    />
   </div>
 </SectionWrapper>

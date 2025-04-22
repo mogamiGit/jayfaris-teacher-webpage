@@ -10,7 +10,6 @@ import FixedActionButtons from "../components/FixedActionButtons.tsx";
 import HoobieBullets from "../components/HoobieBullets.astro";
 import CalendarIcon from "../../public/images/calendarIcon";
 import InsightsSection from "../organisms/InsightsSection.astro";
-import MapPinCard from "../components/MapPinCard";
 
 const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
 ---
@@ -43,11 +42,14 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
   </Header>
 
   <main class="flex flex-col gap-[5rem] md:gap-[8rem]">
-    <HeroSection />
+    <div class="flex flex-col gap-10">
+      <HeroSection />
+      <SocialLinksSection />
+    </div>
+    <AboutMe />
     <InsightsSection />
     <HoobieBullets />
-    <AboutMe />
-    <SocialLinksSection />
+
     <VitalExperience />
     <ContactSection />
     <FixedActionButtons client:load />

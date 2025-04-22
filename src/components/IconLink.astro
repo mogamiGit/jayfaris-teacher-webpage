@@ -23,7 +23,5 @@ const { href, ariaLabel, title, class: className, ...rest } = Astro.props;
   {...rest}
 >
   <slot />
-  {/* SVG icon goes here */}
   {title && <span class="text-accentColor font-medium">{title}</span>}
-  {/* Display title if provided */}
 </a>
