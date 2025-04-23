@@ -13,13 +13,13 @@ const BackgroundBubble: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-const iconVariants = {
+const iconVariant = {
   hidden: { scale: 0.5, opacity: 0 },
-  show:   (d: number) => ({
+  show: (d: number) => ({
     scale: 0.9,
     opacity: 1,
     transition: {
-      scale:   { type: "spring", delay: d },
+      scale: { type: "spring", delay: d },
       opacity: { ease: "linear", delay: d },
     },
   }),
@@ -56,14 +56,14 @@ const SocialIcon: React.FC<Props> = ({
         className
       )}
       style={{ width: dimension, height: dimension }}
-      variants={iconVariants}
+      variants={iconVariant}
       custom={delay}
       initial="hidden"
       animate="show"
       whileHover={{ scale: 1.1 }}
     >
       <img src={iconSrc} alt="" aria-hidden="true" className="w-16" />
-      <span className="mt-2 text-sm">{label}</span>
+      <span className="mt-2 text-sm font-semibold">{label}</span>
       <BackgroundBubble className="absolute inset-0 -z-10 w-full h-full" />
     </motion.a>
   );

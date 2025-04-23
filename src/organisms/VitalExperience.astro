@@ -7,7 +7,7 @@ import { mapPinCards } from "../data/mapPinCards";
 
 <SectionWrapper id="vitalExperience" data-scroll="seccion1">
   <TitleSection client:load text="My vital experience" />
-  <div class="overflow-x-auto snap-x snap-mandatory">
+  <div class="overflow-x-auto snap-x snap-mandatory px-4">
     <div class="flex gap-20 min-w-max py-8 relative">
       {
         mapPinCards.map((card) => (
@@ -17,6 +17,7 @@ import { mapPinCards } from "../data/mapPinCards";
             description={card.description}
             date={card.date}
             rotate={card.rotate}
+            delay={card.delay}
           />
         ))
       }

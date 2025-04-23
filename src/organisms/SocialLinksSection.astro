@@ -1,6 +1,6 @@
 ---
 import SectionWrapper from "../components/SectionWrapper.astro";
-import SocialIcon      from "../components/SocialIcon";
+import SocialIcon from "../components/SocialIcon";
 
 import {
   YOUTUBE_URL,
@@ -11,26 +11,44 @@ import {
 } from "../constants/urls";
 
 const SOCIALS = [
-  { label: "Youtube",   icon: "/public/images/social_media/Youtube.svg",   href: YOUTUBE_URL },
-  { label: "Instagram", icon: "/public/images/social_media/Instagram.svg", href: INSTAGRAM_URL },
-  { label: "Facebook",  icon: "/public/images/social_media/Facebook.svg",  href: FACEBOOK_URL },
-  { label: "X",         icon: "/public/images/social_media/X.svg",         href: X_URL },
-  { label: "Email",     icon: "/public/images/social_media/Email.svg",     href: EMAIL_URL },
+  {
+    label: "Youtube",
+    icon: "/public/images/social_media/Youtube.svg",
+    href: YOUTUBE_URL,
+  },
+  {
+    label: "Instagram",
+    icon: "/public/images/social_media/Instagram.svg",
+    href: INSTAGRAM_URL,
+  },
+  {
+    label: "Facebook",
+    icon: "/public/images/social_media/Facebook.svg",
+    href: FACEBOOK_URL,
+  },
+  { label: "X", icon: "/public/images/social_media/X.svg", href: X_URL },
+  {
+    label: "Email",
+    icon: "/public/images/social_media/Email.svg",
+    href: EMAIL_URL,
+  },
 ] as const;
 ---
 
 <SectionWrapper id="social-links" class="w-full">
   <div
-    class="max-w-fit mx-auto flex justify-center items-center flex-wrap gap-4"
+    class="max-w-fit mx-auto flex justify-center items-center flex-wrap gap-2 sm:gap-4"
   >
-  {SOCIALS.map(({ label, icon, href }, i) => (
-  <SocialIcon
-    label={label}
-    iconSrc={icon}
-    href={href}
-    delay={i * 0.25}
-    client:load
-  />
-))}
+    {
+      SOCIALS.map(({ label, icon, href }, i) => (
+        <SocialIcon
+          label={label}
+          iconSrc={icon}
+          href={href}
+          delay={i * 0.25}
+          client:load
+        />
+      ))
+    }
   </div>
 </SectionWrapper>
