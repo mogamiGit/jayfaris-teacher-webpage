@@ -13,19 +13,33 @@ const BackgroundBubble: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-interface SocialIconProps {
+const iconVariants = {
+  hidden: { scale: 0.5, opacity: 0 },
+  show:   (d: number) => ({
+    scale: 0.9,
+    opacity: 1,
+    transition: {
+      scale:   { type: "spring", delay: d },
+      opacity: { ease: "linear", delay: d },
+    },
+  }),
+};
+
+interface Props {
   label: string;
   iconSrc: string;
   href: string;
   size?: number;
+  delay?: number;
   className?: string;
 }
 
-const SocialIcon: React.FC<SocialIconProps> = ({
+const SocialIcon: React.FC<Props> = ({
   label,
   iconSrc,
   href,
   size = 140,
+  delay = 0,
   className,
 }) => {
   const dimension = `${size}px`;
@@ -37,22 +51,19 @@ const SocialIcon: React.FC<SocialIconProps> = ({
       rel="noopener noreferrer"
       aria-label={label}
       className={classNames(
-        'relative inline-flex flex-col items-center justify-center',
-        'focus:outline-none',
+        "relative inline-flex flex-col items-center justify-center",
+        "focus:outline-none",
         className
       )}
-      initial={{ scale: 0.5, opacity: 0 }}
-      animate={{ scale: 0.9, opacity: 1 }}
-      whileHover={{ scale: 1.1 }}
-      transition={{
-        default: { type: "spring" },
-        opacity: { ease: "linear" }
-      }}
       style={{ width: dimension, height: dimension }}
+      variants={iconVariants}
+      custom={delay}
+      initial="hidden"
+      animate="show"
+      whileHover={{ scale: 1.1 }}
     >
       <img src={iconSrc} alt="" aria-hidden="true" className="w-16" />
       <span className="mt-2 text-sm">{label}</span>
-
       <BackgroundBubble className="absolute inset-0 -z-10 w-full h-full" />
     </motion.a>
   );
