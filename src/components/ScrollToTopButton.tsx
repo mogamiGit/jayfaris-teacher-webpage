@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import * as motion from "motion/react-client";
 
 const ScrollToTopButton: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
