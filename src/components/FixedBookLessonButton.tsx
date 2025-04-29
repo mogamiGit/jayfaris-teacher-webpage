@@ -1,5 +1,5 @@
 import React from 'react';
-import * as motion from "motion/react-client";
+import { motion } from 'framer-motion';
 import CalendarIcon from '../../public/images/calendarIcon';
 
 const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
