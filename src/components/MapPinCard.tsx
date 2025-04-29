@@ -41,7 +41,7 @@ const MapPinCard: React.FC<Props> = ({ title, description, date, rotate = 0, del
         }}
       >
         <img
-          src="/public/images/tagIcon.svg"
+          src="images/tagIcon.svg"
           className="w-14 absolute -top-4 right-1/2 translate-x-10 z-10"
           alt="tag icon"
         />

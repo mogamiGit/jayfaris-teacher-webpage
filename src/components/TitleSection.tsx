@@ -9,11 +9,10 @@ interface Props {
 }
 
 const TitleSection: React.FC<Props> = ({ text, className }) => {
-  const containerClass = classNames("flex gap-1 font-main text-mainColor text-6xl font-thin pb-5 text-nowrap", className)
-
+  const containerClass = classNames("flex gap-1 font-main text-mainColor text-5xl md:text-6xl font-thin pb-5 text-wrap", className)
   return (
     <div className={containerClass}>
-      <p>
+      <p className='w-auto'>
         {text}
       </p>
       <motion.div
