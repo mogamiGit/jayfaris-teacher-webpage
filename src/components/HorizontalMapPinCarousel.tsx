@@ -8,17 +8,35 @@ import PauseIcon from '../../public/images/carousel/pause';
 const HorizontalMapPinCarousel = () => {
   const containerRef = useRef(null);
   const autoScrollInterval = 3000;
-  const scrollAmountAuto = 300;
+  const defaultScrollAmountAuto = 300;
+  const mobileScrollAmountAuto = 280;
   const scrollAmountManual = 50;
   const scrollIntervalDelayManual = 50;
   const [isPlaying, setIsPlaying] = useState(true);
   const [scrollLeftIntervalId, setScrollLeftIntervalId] = useState(null);
   const isCarousel = mapPinCards.length > 3;
+  const [scrollAmountAutoCurrent, setScrollAmountAutoCurrent] = useState(defaultScrollAmountAuto);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setScrollAmountAutoCurrent(mobileScrollAmountAuto);
+      } else {
+        setScrollAmountAutoCurrent(defaultScrollAmountAuto);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mobileScrollAmountAuto, defaultScrollAmountAuto]);
 
   const scrollRightAuto = () => {
     if (containerRef.current && isCarousel) {
       containerRef.current.scrollTo({
-        left: containerRef.current.scrollLeft + scrollAmountAuto,
+        left: containerRef.current.scrollLeft + scrollAmountAutoCurrent,
         behavior: 'smooth',
       });
     }
@@ -60,7 +78,7 @@ const HorizontalMapPinCarousel = () => {
     }
 
     return () => clearInterval(intervalId);
-  }, [isPlaying, isCarousel]);
+  }, [isPlaying, isCarousel, scrollAmountAutoCurrent]);
 
   const togglePlay = () => {
     if (isCarousel) {
@@ -74,7 +92,7 @@ const HorizontalMapPinCarousel = () => {
         ref={containerRef}
         className={`overflow-x-hidden ${isCarousel ? 'snap-x snap-mandatory' : ''} px-4`}
       >
-        <div className={`flex gap-20 ${isCarousel ? 'min-w-max' : ''} py-8 relative`}>
+        <div className={`flex gap-10 sm:gap-20 ${isCarousel ? 'min-w-max' : ''} py-8 relative`}>
           {mapPinCards.map((card, index) => (
             <MapPinCard
               key={index}
@@ -109,6 +127,9 @@ const HorizontalMapPinCarousel = () => {
             onMouseDown={startScrollLeftManual}
             onMouseUp={stopScrollLeftManual}
             onMouseLeave={stopScrollLeftManual}
+            onTouchStart={startScrollLeftManual}
+            onTouchEnd={stopScrollLeftManual}
+            onTouchCancel={stopScrollLeftManual}
             className="min-w-16 h-16 px-4 flex justify-center items-center bg-white text-gray-800 rounded-xl border-2 border-gray-300"
           >
             <RewIcon />
