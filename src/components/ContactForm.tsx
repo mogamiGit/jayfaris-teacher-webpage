@@ -36,9 +36,9 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-4">
+    <div className="w-full mx-auto">
       <div className='pt-6 border-t border-gray-300 dark:border-gray-500'>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <InputCustom
             type="text"
             name="from_name"
