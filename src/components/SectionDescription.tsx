@@ -26,7 +26,7 @@ const sectionDescription: React.FC<Props> = ({ title, description, tags = [], li
         <p className={titleClass}>{title}</p>
         {description &&
           (link ? (
-            <a href={link} target="_blank" className="group whitespace-pre-line hover:underline hover:underline-offset-3 hover:text-mainColor">
+            <a href={link} target="_blank" className="group whitespace-pre-line hover:underline hover:underline-offset-3 hover:text-accentColor">
               <div className="flex gap-0.5 items-center">
                 <p className="text-lg">{description}</p>
                 <ArrowDiagonalIcon className="translate-y-[1px] opacity-0 translate-x-[-5px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />

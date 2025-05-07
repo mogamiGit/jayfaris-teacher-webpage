@@ -12,7 +12,7 @@ const HorizontalMapPinCarousel = () => {
   const mobileScrollAmountAuto = 280;
   const scrollAmountManual = 50;
   const scrollIntervalDelayManual = 50;
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [scrollLeftIntervalId, setScrollLeftIntervalId] = useState(null);
   const isCarousel = mapPinCards.length > 3;
   const [scrollAmountAutoCurrent, setScrollAmountAutoCurrent] = useState(defaultScrollAmountAuto);

@@ -5,3 +5,9 @@ export interface MapPinCard {
   rotate?: number;
   delay?: number;
 }
+
+export interface reviewCard {
+  name: string;
+  review: string;
+  classes: number;
+}

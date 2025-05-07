@@ -21,7 +21,7 @@ const inputCustom: React.FC<Props> = ({ type, name, value, onChange, required, p
                         onChange={onChange}
                         required={required}
                         placeholder={placeholder}
-                        className="w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-500 pb-8 pt-3 placeholder-gray-500 outline-none focus:ring-0 focus:border-mainColor dark:focus:border-mainColor"
+                        className="w-full bg-transparent border-0 border-b-2 border-gray-300 dark:border-gray-500 pb-8 pt-3 placeholder-gray-500 outline-none focus:ring-0 focus:border-accentColor"
                   />
             </div>
       );

@@ -10,6 +10,7 @@ import FixedActionButtons from "../components/FixedActionButtons.tsx";
 import HoobieBullets from "../components/HoobieBullets.astro";
 import CalendarIcon from "../../public/images/calendarIcon";
 import InsightsSection from "../organisms/InsightsSection.astro";
+import UserReviewsSection from "../organisms/UserReviewsSection.astro";
 
 const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
 ---
@@ -50,12 +51,13 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
     <InsightsSection />
     <HoobieBullets />
     <VitalExperience />
+    <UserReviewsSection />
     <ContactSection />
     <FixedActionButtons client:load />
   </main>
 
   <footer class="border-t px-6">
-    <div class="w-full mx-auto py-10 text-sm opacity-80">
+    <div class="w-full mx-auto py-10 text-sm text-gray-500 text-center">
       <a href="https://mogamihub.xyz" target="_blank">
         &#169; 2024 Design by Mónica Galán
       </a>

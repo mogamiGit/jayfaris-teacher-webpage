@@ -37,14 +37,14 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="w-full mx-auto">
-      <div className='pt-6 border-t border-gray-300 dark:border-gray-500'>
+      <div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <InputCustom
             type="text"
             name="from_name"
             value={formData.from_name}
             onChange={handleChange}
-            placeholder="Jane Doe*"
+            placeholder="Sir Mix-a-Lot of Grammar*"
             required={true}
             inputName='Your name'
           />
@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
             name="from_email"
             value={formData.from_email}
             onChange={handleChange}
-            placeholder="jane.doe@email.com*"
+            placeholder="grammar.wizard@email.com*"
             required={true}
             inputName='Your email'
           />
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Hello! Tell me your idea or question... I'm ready to listen.*"
+            placeholder="Email me, and I’ll reply faster than a speeding grammar correction!*"
             required
             inputName='Your message'
           />
