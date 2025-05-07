@@ -21,7 +21,7 @@ const reviewCarouselCard: React.FC<Props> = ({ user, review, classes }) => {
 
   return (
     <div className="hidden duration-700 ease-in-out" data-carousel-item>
-      <div className="flex flex-col justify-center items-center w-full h-full text-center gap-5 max-w-[600px] mx-auto">
+      <div className="flex flex-col justify-center items-center w-full h-full text-center gap-5 max-w-[600px] mx-auto pb-8">
         <img src={avatar.toDataUri()} alt="Avatar" className="w-24 rounded-full border-4 border-white" />
         <div className='flex flex-col gap-4 px-6'>
           <div className='flex flex-col gap-1 text-gray-600'>
