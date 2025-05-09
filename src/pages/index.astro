@@ -11,8 +11,8 @@ import HoobieBullets from "../components/HoobieBullets.astro";
 import CalendarIcon from "../../public/images/calendarIcon";
 import InsightsSection from "../organisms/InsightsSection.astro";
 import UserReviewsSection from "../organisms/UserReviewsSection.astro";
+import { BOOK_LESSON_URL } from "../constants/urls";
 
-const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
 ---
 
 <Layout
@@ -22,7 +22,7 @@ const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
   <Header>
     <a
       class="hover:font-bold hover:text-accentColor duration-200 flex items-center gap-2"
-      href={bookLeasonUrl}
+      href={BOOK_LESSON_URL}
       target="_blank"
     >
       <CalendarIcon className="w-5 pb-1" />

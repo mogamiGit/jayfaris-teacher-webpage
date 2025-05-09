@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import CalendarIcon from '../../public/images/calendarIcon';
+import { BOOK_LESSON_URL } from '../constants/urls';
 
-const bookLeasonUrl = "https://calendly.com/nexolabs/consultoria-uno-a-uno";
 
 const FixedBookLessonButton: React.FC = () => {
   return (
     <motion.a
-      href={bookLeasonUrl}
+      href={BOOK_LESSON_URL}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}
