@@ -29,6 +29,9 @@ importers:
       '@jridgewell/sourcemap-codec':
         specifier: ^1.5.0
         version: 1.5.0
+      '@rive-app/react-canvas':
+        specifier: ^4.19.1
+        version: 4.19.1(react@18.3.1)
       '@tailwindcss/aspect-ratio':
         specifier: ^0.4.2
         version: 0.4.2(tailwindcss@3.4.17)
@@ -881,6 +884,14 @@ packages:
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
+  '@rive-app/canvas@2.27.2':
+    resolution: {integrity: sha512-g9z6x6ZdnkCDHG6irgzotSh4rz2dYCik1NAiUUcmUnepPehfN76sUfVexYoUvxi8+zSgFDPb4spKpMRbTFYO5g==}
+
+  '@rive-app/react-canvas@4.19.1':
+    resolution: {integrity: sha512-WP4A6G5V38pQRjUvbVgzTGUa8hj0ghmMUvzouZhoe8Fm8R4aRF3QlGhwiub4ZU0C846O/DowdgV40g8SfeUotA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0
 
   '@rollup/plugin-inject@5.0.5':
     resolution: {integrity: sha512-2+DEJbNBoPROPkgTDNe8/1YXWcqxbN5DTjASVIOx8HS+pITXushyNiBV56RB08zuptzz8gT3YfkqriTBVycepg==}
@@ -3459,6 +3470,13 @@ snapshots:
     optional: true
 
   '@popperjs/core@2.11.8': {}
+
+  '@rive-app/canvas@2.27.2': {}
+
+  '@rive-app/react-canvas@4.19.1(react@18.3.1)':
+    dependencies:
+      '@rive-app/canvas': 2.27.2
+      react: 18.3.1
 
   '@rollup/plugin-inject@5.0.5(rollup@4.40.1)':
     dependencies:

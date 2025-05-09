@@ -6,6 +6,7 @@ import HobbieBullet from "./HobbieBullet";
 import MarkQuoteIcon from "../../public/images/markQuoteIcon";
 
 const imgFolder = "images/illustrations/";
+const animationFolder = "images/animations/";
 ---
 
 <SectionWrapper
@@ -32,27 +33,34 @@ const imgFolder = "images/illustrations/";
     <HobbieBullet
       title="Creative Arts & Film"
       description="Passionate about storytelling through film production — including writing, acting, directing, and editing."
-      urlImage={imgFolder + "Film.svg"}
+      urlImage={animationFolder + "claquetaClap.riv"}
       altImage="Illustration of a film clapboard in red and blue."
+      withRive={true}
       client:load
     />
     <HobbieBullet
       title="Martial Arts & Movement"
       description="Dedicated to internal martial arts, stage combat, and basic stunt work."
-      urlImage={imgFolder + "/Ninja.svg"}
+      urlImage={animationFolder + "ninjaCombat.riv"}
       altImage="Illustration of a ninja dressed in red and blue performing a high kick."
+      withRive={true}
+      client:load
     />
     <HobbieBullet
       title="Japanese Language"
       description="Lifelong learner of Japanese, fascinated by both the language and the culture."
-      urlImage={imgFolder + "/Japan.svg"}
+      urlImage={animationFolder + "japan.riv"}
       altImage="Illustration of a red circle featuring the word 'Japan', accompanied by sushi and chopsticks."
+      withRive={true}
+      client:load
     />
     <HobbieBullet
       title="Sports & Fitness"
       description="Basketball and gymnastics keep me active and balanced."
-      urlImage={imgFolder + "/Sport.svg"}
+      urlImage={animationFolder + "ballJump.riv"}
       altImage="Illustration of a basketball in red and blue."
+      withRive={true}
+      client:load
     />
   </div>
 </SectionWrapper>
