@@ -7,7 +7,7 @@ interface Props {
 
 export const PlayIcon: React.FC<Props> = ({ className }) => {
   const iconClass = classNames(
-    'w-auto h-6 stroke-current fill-current',
+    'w-auto h-4 stroke-current fill-current',
     className,
   );
 
