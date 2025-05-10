@@ -1,45 +1,14 @@
 ---
 import SectionWrapper from "../components/SectionWrapper.astro";
 import SocialIcon from "../components/SocialIcon";
-
-import {
-  YOUTUBE_URL,
-  INSTAGRAM_URL,
-  FACEBOOK_URL,
-  X_URL,
-  EMAIL_URL,
-} from "../constants/urls";
-
-const SOCIALS = [
-  {
-    label: "Youtube",
-    icon: "images/social_media/YouTube.svg",
-    href: YOUTUBE_URL,
-  },
-  {
-    label: "Instagram",
-    icon: "images/social_media/Instagram.svg",
-    href: INSTAGRAM_URL,
-  },
-  {
-    label: "Facebook",
-    icon: "images/social_media/Facebook.svg",
-    href: FACEBOOK_URL,
-  },
-  { label: "X", icon: "images/social_media/X.svg", href: X_URL },
-  {
-    label: "Email",
-    icon: "images/social_media/Email.svg",
-    href: EMAIL_URL,
-  },
-] as const;
+import { socialMedia } from "../data/social"
 ---
 <SectionWrapper id="social-links" class="w-full">
   <div
     class="max-w-fit mx-auto flex justify-center items-center flex-wrap gap-x-2 gap-y-1 sm:gap-x-4"
   >
     {
-      SOCIALS.map(({ label, icon, href }, i) => (
+      socialMedia.map(({ label, icon, href }, i) => (
         <SocialIcon
           label={label}
           iconSrc={icon}

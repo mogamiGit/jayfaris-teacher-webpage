@@ -38,12 +38,9 @@ const SocialIcon: React.FC<Props> = ({
   label,
   iconSrc,
   href,
-  size = 140,
   delay = 0,
   className,
 }) => {
-  const dimension = `${size}px`;
-
   return (
     <motion.a
       href={href}
@@ -52,21 +49,23 @@ const SocialIcon: React.FC<Props> = ({
       aria-label={label}
       className={classNames(
         "relative inline-flex flex-col items-center justify-center",
+        "w-[8rem] sm:w-[10rem]",
+        "h-[8rem] sm:h-[10rem]",
         "focus:outline-none",
         className
       )}
-      style={{ width: dimension, height: dimension }}
       variants={iconVariant}
       custom={delay}
       initial="hidden"
       animate="show"
       whileHover={{ scale: 1.1 }}
     >
-      <img src={iconSrc} alt="" aria-hidden="true" className="w-16" />
+      <img src={iconSrc} alt="" aria-hidden="true" className="w-12 sm:w-16" />
       <span className="mt-2 text-sm font-semibold">{label}</span>
       <BackgroundBubble className="absolute inset-0 -z-10 w-full h-full" />
     </motion.a>
   );
 };
+
 
 export default SocialIcon;
