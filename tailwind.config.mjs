@@ -22,6 +22,9 @@ export default {
       maskRepeat: {
         'no-repeat': 'no-repeat',
       },
+      screens: {
+        'xs': '22rem',
+      },
 		},
 		colors: {
 			'backgroundColor': '#FBF6E9',

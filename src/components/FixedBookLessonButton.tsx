@@ -17,7 +17,7 @@ const FixedBookLessonButton: React.FC = () => {
       aria-label="Book a lesson"
     >
       <CalendarIcon className="w-5 pb-1" />
-      <span>Book a Lesson</span>
+      <span className='leading-[1.2rem] text-sm xs:text-base'>Book a Lesson</span>
     </motion.a>
   );
 };
