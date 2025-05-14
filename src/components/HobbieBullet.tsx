@@ -1,5 +1,4 @@
 import React from 'react';
-import * as motion from "motion/react-client";
 import { useRive } from '@rive-app/react-canvas';
 
 interface Props {
