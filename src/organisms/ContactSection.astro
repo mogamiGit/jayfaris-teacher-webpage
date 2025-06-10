@@ -3,6 +3,7 @@ import ContactForm from "../components/ContactForm";
 import SectionDescription from "../components/SectionDescription";
 import TitleSection from "../components/TitleSection";
 import SectionWrapper from "../components/SectionWrapper.astro";
+import { EMAIL_ADDRESS, EMAIL_URL } from "../constants/urls";
 ---
 
 <SectionWrapper
@@ -16,7 +17,7 @@ import SectionWrapper from "../components/SectionWrapper.astro";
       <ContactForm client:load />
     </div>
     <div class="flex flex-col gap-8 mb-14">
-      <SectionDescription title="mail" description="jayfaris@email.com" />
+      <SectionDescription title="mail" description={EMAIL_ADDRESS} link={EMAIL_URL} />
       <div class="w-full flex flex-col gap-2">
         <SectionDescription
           title="youtube"
