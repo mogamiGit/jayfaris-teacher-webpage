@@ -6,3 +6,6 @@ export const EMAIL_URL = "mailto:jayfaris72@gmail.com";
 export const BOOK_LESSON_URL = "https://jayfaris.youcanbook.me";
 export const imgFolder = "images/illustrations/";
 export const animationFolder = "images/animations/";
+export const EMAILJS_SERVICE_ID = "service_1lxyd3w";
+export const EMAILJS_TEMPLATE_ID = "template_k36fp1x";
+export const EMAILJS_PUBLIC_KEY = "QTO1HqMFnRQdXMmaU";

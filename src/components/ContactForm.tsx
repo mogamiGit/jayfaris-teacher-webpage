@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import InputCustom from './Inputs/inputCustom'
 import TextAreaCustom from './Inputs/textAreaCustom'
 import Button from './Button';
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../constants/urls';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,10 +24,10 @@ const ContactForm: React.FC = () => {
 
     try {
       const response = await emailjs.send(
-        'service_1lxyd3w',       // Service ID
-        'template_k36fp1x',      // Template ID
-        formData,                // Datos del formulario
-        'QTO1HqMFnRQdXMmaU',
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formData,
+        EMAILJS_PUBLIC_KEY,
       );
       console.log('SUCCESS!', response.status, response.text);
       setStatus('¡Mensaje enviado correctamente!');
